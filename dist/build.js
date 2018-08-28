@@ -8211,9 +8211,9 @@
                 httpEndpoint: "https://api1.eosasia.one",
                 expireInSeconds: 60
             },
-            luckyCoinContract: "chyyshayysha",
-            tokenpoolContract: "bkyyshayysha",
-            chickenContract: "tkyyshayysha"
+            luckyCoinContract: "coinhuoxinio",
+            tokenpoolContract: "bctphuoxinio",
+            chickenContract: "qdzghuoxinio"
         }
     }();
     var rDev = function() {
@@ -8230,14 +8230,14 @@
                 httpEndpoint: "http://192.168.153.140:8888",
                 expireInSeconds: 60
             },
-            luckyCoinContract: "chyyshayysha",
-            tokenpoolContract: "bkyyshayysha",
-            chickenContract: "tkyyshayysha"
+            luckyCoinContract: "coinhuoxinio",
+            tokenpoolContract: "bctphuoxinio",
+            chickenContract: "qdzghuoxinio"
         }
     }();
     t.exports = {
-//          env: r
-          env: rDev
+          env: r
+//          env: rDev
     }
 }
 , function(t, e, n) {
