@@ -2701,7 +2701,7 @@
     var i = n(74)
       , o = n(138)
       , a = i.env.huoxinCoinContract
-      , s = i.env.chickenContract
+      , s = i.env.grablandContract
       , u = i.env.tokenpoolContract
       , l = i.env.scatterConfig
       , c = (i.env.eosConfig,
@@ -5476,7 +5476,7 @@
     t.exports = n.p + "eos_log_c.png?d47213e9db9ef4b8dc4099906a77eb4d"
 }
 , function(t, e, n) {
-    t.exports = n.p + "drop_200eos.png?7d77fa9bc3df52b6491f60163b843e5b"
+    t.exports = n.p + "/new/drop_200eos.png?7d77fa9bc3df52b6491f60163b843e5b"
 }
 , function(t, e, n) {
     "use strict";
@@ -8213,7 +8213,7 @@
             },
             huoxinCoinContract: "coinhuoxinio",
             tokenpoolContract: "bctphuoxinio",
-            chickenContract: "qdzghuoxinio"
+            grablandContract: "qdzghuoxinio"
         }
     }();
     var rDev = function() {
@@ -8232,12 +8232,12 @@
             },
             huoxinCoinContract: "coinhuoxinio",
             tokenpoolContract: "bctphuoxinio",
-            chickenContract: "qdzghuoxinio"
+            grablandContract: "qdzghuoxinio"
         }
     }();
     t.exports = {
-          env: r
-//          env: rDev
+//          env: r
+          env: rDev
     }
 }
 , function(t, e, n) {
@@ -16379,10 +16379,10 @@
     }
 }
 , function(t, e, n) {
-    t.exports = n.p + "log_navbar.png?7af05b9c6e51f8b0b561d594f9a8eb7c"
+    t.exports = n.p + "/new/log_navbar.png?7af05b9c6e51f8b0b561d594f9a8eb7c"
 }
 , function(t, e, n) {
-    t.exports = n.p + "dig_log.png?a8a47a5ef459328dd3290e4c96cdab09"
+    t.exports = n.p + "/new/dig_log.png?a8a47a5ef459328dd3290e4c96cdab09"
 }
 , function(t, e, n) {
     "use strict";
@@ -16509,10 +16509,10 @@
     var r = n(432)
       , i = n(439);
     e.a = {
-        name: "chicken",
+        name: "grabland",
         components: {
-            ChickenHD: r.a,
-            ChickenBD: i.a
+            GrablandHD: r.a,
+            GrablandBD: i.a
         },
         data: function() {
             return {
@@ -16554,7 +16554,7 @@
     var r = n(30);
     n.n(r);
     e.a = {
-        name: "chickenhd",
+        name: "grablandhd",
         data: function() {
             return {
                 show: !0,
@@ -16603,7 +16603,7 @@
     var r = n(30);
     n.n(r);
     e.a = {
-        name: "chickenbd",
+        name: "grablandbd",
         data: function() {
             return {
                 tab: 0,
@@ -16845,7 +16845,7 @@
         path: "/huoxincoin",
         component: u.a
     }, {
-        path: "/chicken",
+        path: "/grabland",
         component: l.a
     }, {
         path: "/developer",
@@ -40016,9 +40016,9 @@
             }
         }, [r("router-link", {
             attrs: {
-                to: "/chicken"
+                to: "/grabland"
             }
-        }, [t._v(t._s(t.$t("NavBar.Chicken")))])], 1)/*, t._v(" "), r("b-nav-item", {
+        }, [t._v(t._s(t.$t("NavBar.Grabland")))])], 1)/*, t._v(" "), r("b-nav-item", {
             staticClass: "top",
             class: {
                 active: 3 == t.tab
@@ -41401,7 +41401,7 @@
                 href: t.turorialUrl,
                 target: "_blank"
             }
-        }, [t._v(" " + t._s(t.$t("Chicken.head.Title3")))])])])]), t._v(" "), r("div", {
+        }, [t._v(" " + t._s(t.$t("Grabland.head.Title3")))])])])]), t._v(" "), r("div", {
             staticClass: "trade-panel"
         }, [r("b-alert", {
             attrs: {
@@ -41602,10 +41602,10 @@
     t.exports = n.p + "EOS_Reserve.png?e71a8df2258eb9b4b4b1b83744559efe"
 }
 , function(t, e, n) {
-    t.exports = n.p + "transfer_icon.png?2e54518cc18b4901c6462e6b15b714d2"
+    t.exports = n.p + "/new/transfer_icon.png?2e54518cc18b4901c6462e6b15b714d2"
 }
 , function(t, e, n) {
-    t.exports = n.p + "HXC_Reserve.png?9b344026a540382c205e831543206685"
+    t.exports = n.p + "/new/HXC_Reserve.png?9b344026a540382c205e831543206685"
 }
 , function(t, e, n) {
     "use strict";
@@ -41627,7 +41627,7 @@
 }
 , function(t, e, n) {
     e = t.exports = n(13)(!1),
-    e.push([t.i, ".chicken{width:100%}", ""])
+    e.push([t.i, ".grabland{width:100%}", ""])
 }
 , function(t, e, n) {
     "use strict";
@@ -41650,11 +41650,11 @@
 , function(t, e, n) {
     var r = n(62);
     e = t.exports = n(13)(!1),
-    e.push([t.i, ".chickenhd{background:url(" + r(n(435)) + ");background-size:cover;background-repeat:no-repeat;width:100%;padding:1.8rem 0 5rem;margin:0 auto}.chickenhd .header1{padding-top:6rem;font-size:55px;color:#fff;text-align:center}.chickenhd .header2{font-size:3rem;color:#0ec000;text-align:center}.chickenhd .header2 img{height:3rem;margin:0 0 .9rem}.chickenhd .container{width:23rem;margin:0 auto}.chickenhd .container p{font-size:2rem;font-style:italic;color:#fff;padding:0;text-align:center}.chickenhd .wallet{width:100%;margin:0 auto;padding:2rem}.chickenhd .wallet .binding-wallet{color:#fff;background-color:#0ec000;font-size:1.5rem;max-width:30rem;margin:0 auto}.chickenhd .wallet .no-eos-wallet{color:#0ec000;font-size:1rem;text-align:center;padding:.55rem 0 0}.chickenhd .wallet .no-eos-wallet a{color:#0ec000}", ""])
+    e.push([t.i, ".grablandhd{background:url(" + r(n(435)) + ");background-size:cover;background-repeat:no-repeat;width:100%;padding:1.8rem 0 5rem;margin:0 auto}.grablandhd .header1{padding-top:6rem;font-size:55px;color:#fff;text-align:center}.grablandhd .header2{font-size:3rem;color:#0ec000;text-align:center}.grablandhd .header2 img{height:3rem;margin:0 0 .9rem}.grablandhd .container{width:23rem;margin:0 auto}.grablandhd .container p{font-size:2rem;font-style:italic;color:#fff;padding:0;text-align:center}.grablandhd .wallet{width:100%;margin:0 auto;padding:2rem}.grablandhd .wallet .binding-wallet{color:#fff;background-color:#0ec000;font-size:1.5rem;max-width:30rem;margin:0 auto}.grablandhd .wallet .no-eos-wallet{color:#0ec000;font-size:1rem;text-align:center;padding:.55rem 0 0}.grablandhd .wallet .no-eos-wallet a{color:#0ec000}", ""])
 }
 , function(t, e, n) {
 //  t.exports = n.p + "NEWBG.jpg?40e2d45860562c060c00c483e254a46b"
-  t.exports = n.p + "bg_qdz2.jpg?40e2d45860562c060c00c483e254a46b"
+  t.exports = n.p + "/new/bg_qdz.png?40e2d45860562c060c00c483e254a46b"
 }
 , function(t, e, n) {
     "use strict";
@@ -41663,10 +41663,10 @@
           , e = t.$createElement
           , r = t._self._c || e;
         return r("div", {
-            staticClass: "chickenhd"
+            staticClass: "grablandhd"
         }, [r("p", {
             staticClass: "header1"
-        }, [t._v(" " + t._s(t.$t("Chicken.head.Title1")))]), t._v(" "), r("p", {
+        }, [t._v(" " + t._s(t.$t("Grabland.head.Title1")))]), t._v(" "), r("p", {
             staticClass: "header2"
         }, [t._v("\n\n        " + t._s(t.totalPool) + "\n        "), r("img", {
             staticStyle: {
@@ -41703,7 +41703,7 @@
             on: {
                 click: t.auth
             }
-        }, [t._v("\n            " + t._s(t.$t("Chicken.head.Title2")) + " ")]), t._v(" "), r("div", {
+        }, [t._v("\n            " + t._s(t.$t("Grabland.head.Title2")) + " ")]), t._v(" "), r("div", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41711,7 +41711,7 @@
                 expression: "accountName"
             }],
             staticClass: "btn btn-block binding-wallet"
-        }, [t._v("\n            " + t._s(t.$t("Chicken.head.Title4")) + ": " + t._s(t.balance) + " ")]), t._v(" "), r("p", {
+        }, [t._v("\n            " + t._s(t.$t("Grabland.head.Title4")) + ": " + t._s(t.balance) + " ")]), t._v(" "), r("p", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41724,7 +41724,7 @@
                 href: t.turorialUrl,
                 target: "_blank"
             }
-        }, [t._v(" " + t._s(t.$t("Chicken.head.Title3")))])])])])
+        }, [t._v(" " + t._s(t.$t("Grabland.head.Title3")))])])])])
     }
       , i = []
       , o = {
@@ -41759,7 +41759,7 @@
 }
 , function(t, e, n) {
     e = t.exports = n(13)(!1),
-    e.push([t.i, ".chickenbd{background-color:#171d32;width:100%;color:#3ca4f1}.chickenbd .alert{position:absolute;width:15rem;margin-top:-4rem;left:50%;margin-left:-7.5rem;opacity:.8;text-align:center}.chickenbd .finish{font-size:.8rem}.chickenbd .finish p{margin-bottom:0}.chickenbd .realtime{width:90%;margin:0 auto}.chickenbd .realtime table{width:100%;margin-top:1.5rem}.chickenbd .realtime thead{color:#fff;text-align:center;font-size:1rem;margin-bottom:1.5rem}.chickenbd .realtime tbody{color:#aba8ab;text-align:center;font-size:.8rem}.chickenbd .realtime tbody .green{color:#0ec000}.chickenbd .trade-part{background-color:#1b233a;width:100%;padding-top:4.4rem;padding-bottom:3rem}.chickenbd .trade-part .title{text-align:center;font-size:1.6rem;color:#fff;padding-top:1.5rem;padding-bottom:1.5rem}.chickenbd .trade-part .title img{width:100%}.chickenbd .trade-part table.r1{margin-bottom:1rem;font-size:1.3rem;width:100%}.chickenbd .trade-part table.r1 .t1{color:#fff;text-align:left;width:40%}.chickenbd .trade-part table.r1 .t2{text-align:right;color:#0ec000}.chickenbd .trade-part table.r1 .t2 img{width:1rem;margin-top:-.6rem}.chickenbd .trade-part table.r1 .t3{text-align:right;color:#0ec000;font-size:.8rem}.chickenbd .trade-part .row{margin:0 auto;width:80%}.chickenbd .trade-part .row .trade-panel{min-height:37rem;background-image:radial-gradient(50% 100%,#233050 0,#0d0e14 100%);border:1px solid #11253c;border-radius:3.6px}.chickenbd .trade-part .row .trade-panel .game-status{width:80%;margin:0 auto}.chickenbd .trade-part .row .trade-panel .gray{color:#138118}.chickenbd .trade-part .row .trade-panel .withdraw{width:80%;margin:0 auto}.chickenbd .trade-part .row .trade-panel .withdraw table.r3{width:100%;margin-top:1rem;margin-bottom:2rem}.chickenbd .trade-part .row .trade-panel .withdraw table.r3 .t1{font-size:1.3rem;color:#fff;text-align:left}.chickenbd .trade-part .row .trade-panel .withdraw table.r3 .total-withdraw{font-family:HelveticaNeue;font-size:1.5rem;color:#fd9800;letter-spacing:0;text-align:right;text-shadow:0 0 1px rgba(16,223,0,.71)}.chickenbd .trade-part .row .trade-panel .withdraw .dotted-line{opacity:.7;border:1px dotted #fff}.chickenbd .trade-part .row .trade-panel .withdraw .withdraw-button{background:#fd9800;border:0 solid #979797;border-radius:5.4px;color:#fff;font-size:1.5rem;margin-bottom:2rem}.chickenbd .trade-part .row .trade-panel .nav-tabs{border-bottom:none!important;margin-top:2rem}.chickenbd .trade-part .row .trade-panel .nav-tabs .nav-link{border:none!important}.chickenbd .trade-part .row .trade-panel .nav-tabs .nav-item a{color:#fff!important;font-size:1.5rem}.chickenbd .trade-part .row .trade-panel .nav-tabs .nav-item.active a{color:#3ca4f1!important}.chickenbd .trade-part .row .trade-panel .nav-tabs .nav-item.active a span{display:inline-block;border-bottom:.2rem solid #3ca4f1}.chickenbd .trade-part .row .trade-panel .nav-tabs .nav-item.active a:hover{border:none!important}.chickenbd .trade-part .row .trade-panel .bullet-logo{display:block;margin:2rem auto;width:50%}.chickenbd .trade-part .row .trade-panel .input-group.input-group-lg{width:90%;margin:0 auto}.chickenbd .trade-part .row .trade-panel .gray-panel{background:#252d42;border:.05rem solid #4d4d4d;border-radius:.05rem;width:85%;margin:1rem auto;text-align:center;padding:1rem}.chickenbd .trade-part .row .trade-panel .gray-panel .line1{font-family:PingFangSC-Medium;font-size:1rem;color:#9296a0;letter-spacing:0;margin-bottom:.3rem}.chickenbd .trade-part .row .trade-panel .gray-panel .line2{font-family:HelveticaNeue-Italic;font-size:1.2rem;color:#d3d5d9;letter-spacing:0;margin-bottom:0}.chickenbd .trade-part .row .trade-panel .buy-button-container{margin-top:1rem;margin-bottom:1rem;font-family:HelveticaNeue-Medium;font-size:1rem;color:#fd9800;letter-spacing:0;text-align:center}.chickenbd .trade-part .row .trade-panel .buy-button-container .col-2,.chickenbd .trade-part .row .trade-panel .buy-button-container .col-3{padding-left:.2rem;padding-right:.2rem}.chickenbd .trade-part .row .trade-panel .buy-button-container .buy-button{background:#1f152e;border:.1rem solid #774a27;border-radius:.2rem;text-align:center;height:4rem}.chickenbd .trade-part .row .trade-panel .buy-button-container .buy-button div{position:relative;top:50%;transform:translateY(-50%)}.chickenbd .trade-part .row .trade-panel .buy-button-container .buy-button:hover{cursor:pointer}.chickenbd .trade-part .row .trade-panel .btn.btn-block.trade-chicken{width:80%;margin:0 auto;background:#0ec000;border:0 solid #979797;border-radius:5.4px;font-family:PingFangSC-Medium;font-size:1.5rem;color:#fff;letter-spacing:0;text-align:center;margin-bottom:2rem;margin-top:3.3rem}.chickenbd .token{height:14rem}.chickenbd .token div{position:absolute;margin-top:3rem}.chickenbd .token div img{width:2rem}.chickenbd .box{height:12rem;color:hsla(0,0%,100%,.5);letter-spacing:0}.chickenbd .box div{position:absolute;margin-top:3rem;height:7rem}.chickenbd .box div p{margin-top:1rem;margin-bottom:0;position:absolute;bottom:0;width:5rem}.chickenbd .chick-progress{margin-top:4rem}.chickenbd .chick-progress .number{padding-top:1rem}.chickenbd .chick-progress .number div{position:absolute;margin-top:-3rem;color:#fff;font-size:1rem}.chickenbd .chick-progress .circle div{position:absolute}.chickenbd .chick-progress .circle div .goal-core{background:#3ca4f1;border:.2rem solid #fff;width:1.5rem;height:1.5rem;border-radius:1rem;margin-top:-.9rem}.chickenbd .chick-progress .circle div .goal-out{background-image:radial-gradient(50% 100%,#3ca4f1 0,rgba(60,164,241,.2) 100%);width:2.3rem;height:2.3rem;border-radius:3rem;margin-top:-1.3rem;margin-left:-.35rem}.chickenbd .chick-progress .circle div .core{background:#fd9800;border:.1rem solid #fff;width:1.2rem;height:1.2rem;border-radius:1rem;margin-top:-.8rem}.chickenbd .chick-progress .circle div .out{margin-top:-1.2rem;margin-left:-.4em;width:2rem;height:2rem;border-radius:3rem;opacity:.5;background-image:radial-gradient(50% 100%,hsla(0,0%,100%,.55) 0,hsla(0,0%,100%,.11) 100%)}.chickenbd .chick-progress .base{width:100%;background:#fff;height:.3rem}.chickenbd .chick-progress .bar{background-image:linear-gradient(90deg,#d8d8d8 10%,rgba(60,164,241,.99));height:.3rem;position:absolute}.chickenbd .container{width:80%;padding-top:1.8rem;min-height:26rem}.chickenbd .container .nav-tabs{border-bottom:none;padding-bottom:.8rem}.chickenbd .container .nav-tabs .nav-link{border:none!important}.chickenbd .container .nav-tabs .nav-item.active .nav-link span{color:#3ca4f1;border-bottom:.2rem solid!important}.chickenbd .container .nav-tabs .nav-item{font-size:2rem;letter-spacing:0;text-align:center}.chickenbd .container .nav-tabs .nav-item a{color:#fff}.chickenbd .container .doc{width:100%;margin:0 10rem 0 0;text-align:center;font-size:1.3rem;color:#9ca2ad;letter-spacing:0;padding:1.2rem 0 2rem}.chickenbd .container .methods{width:100%;text-align:center;margin-top:3rem;color:#fff}.chickenbd .container .methods img{width:5rem}.chickenbd .container .methods .drop-log{margin-left:2rem}.chickenbd .container .methods .header{margin-top:1rem;font-size:1.5rem;color:#fff;letter-spacing:0;text-align:center}.chickenbd .container .methods .content{font-family:PingFangSC-Medium;font-size:1rem;color:#a1a1a1;letter-spacing:0;text-align:center}.chickenbd .container table.line-1{width:100%}.chickenbd .container table.line-1 .line-a{width:25%}.chickenbd .container table.line-1 .line-a img{width:100%;height:90%}.chickenbd .container table.line-1 .line-b{width:50%}.chickenbd .container table.line-1 .line-c{width:30%}.chickenbd .container table.line-1 .line-c img{width:100%;height:90%}.chickenbd .container table.line-1 .line-d{width:20%}.chickenbd .container table.line-1 span{font-size:1.6rem;display:inline-block;width:100%;text-align:center}.chickenbd .container table.line-2{margin-top:2rem;width:100%}.chickenbd .container table.line-2 td{text-align:center}.chickenbd .container table.line-2 td img{width:1.2rem;vertical-align:sub}.chickenbd .container table.line-2 td span{font-size:1.4rem}.chickenbd .container table.line-2 td span.big{font-size:2.5rem}.chickenbd .container table.line-2 td span.small{font-size:1.4rem}.chickenbd .container table.line-2 td span.small img{width:1.7rem;display:inline-block;margin-bottom:.2rem;margin-right:.4rem}.chickenbd .container table.line-2 td span.mid{font-size:2.5rem}", ""])
+    e.push([t.i, ".grablandbd{background-color:#171d32;width:100%;color:#3ca4f1}.grablandbd .alert{position:absolute;width:15rem;margin-top:-4rem;left:50%;margin-left:-7.5rem;opacity:.8;text-align:center}.grablandbd .finish{font-size:.8rem}.grablandbd .finish p{margin-bottom:0}.grablandbd .realtime{width:90%;margin:0 auto}.grablandbd .realtime table{width:100%;margin-top:1.5rem}.grablandbd .realtime thead{color:#fff;text-align:center;font-size:1rem;margin-bottom:1.5rem}.grablandbd .realtime tbody{color:#aba8ab;text-align:center;font-size:.8rem}.grablandbd .realtime tbody .green{color:#0ec000}.grablandbd .trade-part{background-color:#1b233a;width:100%;padding-top:4.4rem;padding-bottom:3rem}.grablandbd .trade-part .title{text-align:center;font-size:1.6rem;color:#fff;padding-top:1.5rem;padding-bottom:1.5rem}.grablandbd .trade-part .title img{width:100%}.grablandbd .trade-part table.r1{margin-bottom:1rem;font-size:1.3rem;width:100%}.grablandbd .trade-part table.r1 .t1{color:#fff;text-align:left;width:40%}.grablandbd .trade-part table.r1 .t2{text-align:right;color:#0ec000}.grablandbd .trade-part table.r1 .t2 img{width:1rem;margin-top:-.6rem}.grablandbd .trade-part table.r1 .t3{text-align:right;color:#0ec000;font-size:.8rem}.grablandbd .trade-part .row{margin:0 auto;width:80%}.grablandbd .trade-part .row .trade-panel{min-height:37rem;background-image:radial-gradient(50% 100%,#233050 0,#0d0e14 100%);border:1px solid #11253c;border-radius:3.6px}.grablandbd .trade-part .row .trade-panel .game-status{width:80%;margin:0 auto}.grablandbd .trade-part .row .trade-panel .gray{color:#138118}.grablandbd .trade-part .row .trade-panel .withdraw{width:80%;margin:0 auto}.grablandbd .trade-part .row .trade-panel .withdraw table.r3{width:100%;margin-top:1rem;margin-bottom:2rem}.grablandbd .trade-part .row .trade-panel .withdraw table.r3 .t1{font-size:1.3rem;color:#fff;text-align:left}.grablandbd .trade-part .row .trade-panel .withdraw table.r3 .total-withdraw{font-family:HelveticaNeue;font-size:1.5rem;color:#fd9800;letter-spacing:0;text-align:right;text-shadow:0 0 1px rgba(16,223,0,.71)}.grablandbd .trade-part .row .trade-panel .withdraw .dotted-line{opacity:.7;border:1px dotted #fff}.grablandbd .trade-part .row .trade-panel .withdraw .withdraw-button{background:#fd9800;border:0 solid #979797;border-radius:5.4px;color:#fff;font-size:1.5rem;margin-bottom:2rem}.grablandbd .trade-part .row .trade-panel .nav-tabs{border-bottom:none!important;margin-top:2rem}.grablandbd .trade-part .row .trade-panel .nav-tabs .nav-link{border:none!important}.grablandbd .trade-part .row .trade-panel .nav-tabs .nav-item a{color:#fff!important;font-size:1.5rem}.grablandbd .trade-part .row .trade-panel .nav-tabs .nav-item.active a{color:#3ca4f1!important}.grablandbd .trade-part .row .trade-panel .nav-tabs .nav-item.active a span{display:inline-block;border-bottom:.2rem solid #3ca4f1}.grablandbd .trade-part .row .trade-panel .nav-tabs .nav-item.active a:hover{border:none!important}.grablandbd .trade-part .row .trade-panel .bullet-logo{display:block;margin:2rem auto;width:50%}.grablandbd .trade-part .row .trade-panel .input-group.input-group-lg{width:90%;margin:0 auto}.grablandbd .trade-part .row .trade-panel .gray-panel{background:#252d42;border:.05rem solid #4d4d4d;border-radius:.05rem;width:85%;margin:1rem auto;text-align:center;padding:1rem}.grablandbd .trade-part .row .trade-panel .gray-panel .line1{font-family:PingFangSC-Medium;font-size:1rem;color:#9296a0;letter-spacing:0;margin-bottom:.3rem}.grablandbd .trade-part .row .trade-panel .gray-panel .line2{font-family:HelveticaNeue-Italic;font-size:1.2rem;color:#d3d5d9;letter-spacing:0;margin-bottom:0}.grablandbd .trade-part .row .trade-panel .buy-button-container{margin-top:1rem;margin-bottom:1rem;font-family:HelveticaNeue-Medium;font-size:1rem;color:#fd9800;letter-spacing:0;text-align:center}.grablandbd .trade-part .row .trade-panel .buy-button-container .col-2,.grablandbd .trade-part .row .trade-panel .buy-button-container .col-3{padding-left:.2rem;padding-right:.2rem}.grablandbd .trade-part .row .trade-panel .buy-button-container .buy-button{background:#1f152e;border:.1rem solid #774a27;border-radius:.2rem;text-align:center;height:4rem}.grablandbd .trade-part .row .trade-panel .buy-button-container .buy-button div{position:relative;top:50%;transform:translateY(-50%)}.grablandbd .trade-part .row .trade-panel .buy-button-container .buy-button:hover{cursor:pointer}.grablandbd .trade-part .row .trade-panel .btn.btn-block.trade-grabland{width:80%;margin:0 auto;background:#0ec000;border:0 solid #979797;border-radius:5.4px;font-family:PingFangSC-Medium;font-size:1.5rem;color:#fff;letter-spacing:0;text-align:center;margin-bottom:2rem;margin-top:3.3rem}.grablandbd .token{height:14rem}.grablandbd .token div{position:absolute;margin-top:3rem}.grablandbd .token div img{width:2rem}.grablandbd .box{height:12rem;color:hsla(0,0%,100%,.5);letter-spacing:0}.grablandbd .box div{position:absolute;margin-top:3rem;height:7rem}.grablandbd .box div p{margin-top:1rem;margin-bottom:0;position:absolute;bottom:0;width:5rem}.grablandbd .chick-progress{margin-top:4rem}.grablandbd .chick-progress .number{padding-top:1rem}.grablandbd .chick-progress .number div{position:absolute;margin-top:-3rem;color:#fff;font-size:1rem}.grablandbd .chick-progress .circle div{position:absolute}.grablandbd .chick-progress .circle div .goal-core{background:#3ca4f1;border:.2rem solid #fff;width:1.5rem;height:1.5rem;border-radius:1rem;margin-top:-.9rem}.grablandbd .chick-progress .circle div .goal-out{background-image:radial-gradient(50% 100%,#3ca4f1 0,rgba(60,164,241,.2) 100%);width:2.3rem;height:2.3rem;border-radius:3rem;margin-top:-1.3rem;margin-left:-.35rem}.grablandbd .chick-progress .circle div .core{background:#fd9800;border:.1rem solid #fff;width:1.2rem;height:1.2rem;border-radius:1rem;margin-top:-.8rem}.grablandbd .chick-progress .circle div .out{margin-top:-1.2rem;margin-left:-.4em;width:2rem;height:2rem;border-radius:3rem;opacity:.5;background-image:radial-gradient(50% 100%,hsla(0,0%,100%,.55) 0,hsla(0,0%,100%,.11) 100%)}.grablandbd .chick-progress .base{width:100%;background:#fff;height:.3rem}.grablandbd .chick-progress .bar{background-image:linear-gradient(90deg,#d8d8d8 10%,rgba(60,164,241,.99));height:.3rem;position:absolute}.grablandbd .container{width:80%;padding-top:1.8rem;min-height:26rem}.grablandbd .container .nav-tabs{border-bottom:none;padding-bottom:.8rem}.grablandbd .container .nav-tabs .nav-link{border:none!important}.grablandbd .container .nav-tabs .nav-item.active .nav-link span{color:#3ca4f1;border-bottom:.2rem solid!important}.grablandbd .container .nav-tabs .nav-item{font-size:2rem;letter-spacing:0;text-align:center}.grablandbd .container .nav-tabs .nav-item a{color:#fff}.grablandbd .container .doc{width:100%;margin:0 10rem 0 0;text-align:center;font-size:1.3rem;color:#9ca2ad;letter-spacing:0;padding:1.2rem 0 2rem}.grablandbd .container .methods{width:100%;text-align:center;margin-top:3rem;color:#fff}.grablandbd .container .methods img{width:5rem}.grablandbd .container .methods .drop-log{margin-left:2rem}.grablandbd .container .methods .header{margin-top:1rem;font-size:1.5rem;color:#fff;letter-spacing:0;text-align:center}.grablandbd .container .methods .content{font-family:PingFangSC-Medium;font-size:1rem;color:#a1a1a1;letter-spacing:0;text-align:center}.grablandbd .container table.line-1{width:100%}.grablandbd .container table.line-1 .line-a{width:25%}.grablandbd .container table.line-1 .line-a img{width:100%;height:90%}.grablandbd .container table.line-1 .line-b{width:50%}.grablandbd .container table.line-1 .line-c{width:30%}.grablandbd .container table.line-1 .line-c img{width:100%;height:90%}.grablandbd .container table.line-1 .line-d{width:20%}.grablandbd .container table.line-1 span{font-size:1.6rem;display:inline-block;width:100%;text-align:center}.grablandbd .container table.line-2{margin-top:2rem;width:100%}.grablandbd .container table.line-2 td{text-align:center}.grablandbd .container table.line-2 td img{width:1.2rem;vertical-align:sub}.grablandbd .container table.line-2 td span{font-size:1.4rem}.grablandbd .container table.line-2 td span.big{font-size:2.5rem}.grablandbd .container table.line-2 td span.small{font-size:1.4rem}.grablandbd .container table.line-2 td span.small img{width:1.7rem;display:inline-block;margin-bottom:.2rem;margin-right:.4rem}.grablandbd .container table.line-2 td span.mid{font-size:2.5rem}", ""])
 }
 , function(t, e, n) {
     "use strict";
@@ -41768,7 +41768,7 @@
           , e = t.$createElement
           , r = t._self._c || e;
         return r("div", {
-            staticClass: "chickenbd"
+            staticClass: "grablandbd"
         }, [r("div", {
             staticClass: "container"
         }, [r("b-nav", {
@@ -41785,7 +41785,7 @@
                     t.tab = 0
                 }
             }
-        }, [r("span", [t._v(t._s(t.$t("Chicken.body.Rule")))])]), t._v(" "), r("b-nav-item", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.body.Rule")))])]), t._v(" "), r("b-nav-item", {
             class: {
                 active: 1 == t.tab
             },
@@ -41794,7 +41794,7 @@
                     t.tab = 1
                 }
             }
-        }, [r("span", [t._v(t._s(t.$t("Chicken.body.AirDrop")))])]), t._v(" "), r("b-nav-item", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.body.AirDrop")))])]), t._v(" "), r("b-nav-item", {
             class: {
                 active: 2 == t.tab
             },
@@ -41803,7 +41803,7 @@
                     t.tab = 2
                 }
             }
-        }, [r("span", [t._v(t._s(t.$t("Chicken.body.Mining")))])])], 1), t._v(" "), r("div", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.body.Mining")))])])], 1), t._v(" "), r("div", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41813,11 +41813,11 @@
             staticClass: "doc"
         }, [r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.RuleT1")))]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.RuleT1")))]), t._v(" "), r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.RuleT2")) + " ")]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.RuleT2")) + " ")]), t._v(" "), r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.RuleT3")))])]), t._v(" "), r("div", {
+        }, [t._v(t._s(t.$t("Grabland.body.RuleT3")))])]), t._v(" "), r("div", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41827,11 +41827,11 @@
             staticClass: "doc"
         }, [r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.DropT1")))]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.DropT1")))]), t._v(" "), r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.DropT2")) + " ")]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.DropT2")) + " ")]), t._v(" "), r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.DropT3")))])]), t._v(" "), r("div", {
+        }, [t._v(t._s(t.$t("Grabland.body.DropT3")))])]), t._v(" "), r("div", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41841,11 +41841,11 @@
             staticClass: "doc"
         }, [r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.MiningT1")))]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.MiningT1")))]), t._v(" "), r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.MiningT2")))]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.MiningT2")))]), t._v(" "), r("p", {
             staticClass: "title1"
-        }, [t._v(t._s(t.$t("Chicken.body.MiningT3")))])]), t._v(" "), r("table", {
+        }, [t._v(t._s(t.$t("Grabland.body.MiningT3")))])]), t._v(" "), r("table", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41855,9 +41855,9 @@
             staticClass: "line-1"
         }, [r("tr", [t._m(0), t._v(" "), r("td", {
             staticClass: "line-b"
-        }, [r("span", [t._v(t._s(t.$t("Chicken.body.RuleT4", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.body.RuleT4", {
             numBullet: t.numBullet
-        })) + " " + t._s(t.$t("Chicken.body.RuleT6")))])]), t._v(" "), t._m(1)])]), t._v(" "), r("table", {
+        })) + " " + t._s(t.$t("Grabland.body.RuleT6")))])]), t._v(" "), t._m(1)])]), t._v(" "), r("table", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41867,7 +41867,7 @@
             staticClass: "line-1"
         }, [r("tr", [t._m(2), t._v(" "), r("td", {
             staticClass: "line-b"
-        }, [r("span", [t._v(t._s(t.$t("Chicken.body.RuleT5", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.body.RuleT5", {
             bulletAmount: t.bulletAmount,
             bulletTime: t.bulletTime
         })))])]), t._v(" "), t._m(3)])]), t._v(" "), r("table", {
@@ -41883,7 +41883,7 @@
             attrs: {
                 src: n(443)
             }
-        }), t._v(" "), r("span", [t._v(t._s(t.$t("Chicken.body.Title3")) + " ")]), r("span", {
+        }), t._v(" "), r("span", [t._v(t._s(t.$t("Grabland.body.Title3")) + " ")]), r("span", {
             staticClass: "big"
         }, [t._v(" " + t._s(t.airdropBox) + " EOS")])])])]), t._v(" "), r("table", {
             directives: [{
@@ -41899,9 +41899,9 @@
             attrs: {
                 src: n(444)
             }
-        }), t._v(t._s(t.$t("Chicken.body.MiningT5")))]), t._v("   "), r("span", {
+        }), t._v(t._s(t.$t("Grabland.body.MiningT5")))]), t._v("   "), r("span", {
             staticClass: "mid"
-        }, [t._v(t._s(t.$t("Chicken.body.MiningT6", {
+        }, [t._v(t._s(t.$t("Grabland.body.MiningT6", {
             hxcPrice: t.hxcPrice
         })))])])])]), t._v(" "), r("table", {
             directives: [{
@@ -41917,26 +41917,26 @@
             }
         }), t._v(" "), r("p", {
             staticClass: "header"
-        }, [t._v(t._s(t.$t("Chicken.body.RuleMinhead")))]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.RuleMinhead")))]), t._v(" "), r("p", {
             staticClass: "content"
-        }, [t._v(" " + t._s(t.$t("Chicken.body.RuleMinbody")) + " ")])]), t._v(" "), r("td", [r("img", {
+        }, [t._v(" " + t._s(t.$t("Grabland.body.RuleMinbody")) + " ")])]), t._v(" "), r("td", [r("img", {
             staticClass: "drop-log",
             attrs: {
                 src: n(445)
             }
         }), t._v(" "), r("p", {
             staticClass: "header"
-        }, [t._v(t._s(t.$t("Chicken.body.RuleDrophead")))]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.RuleDrophead")))]), t._v(" "), r("p", {
             staticClass: "content"
-        }, [t._v(t._s(t.$t("Chicken.body.RuleDropbody")))])]), t._v(" "), r("td", [r("img", {
+        }, [t._v(t._s(t.$t("Grabland.body.RuleDropbody")))])]), t._v(" "), r("td", [r("img", {
             attrs: {
                 src: n(446)
             }
         }), t._v(" "), r("p", {
             staticClass: "header"
-        }, [t._v(t._s(t.$t("Chicken.body.RuleChampinghead")))]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.body.RuleChampinghead")))]), t._v(" "), r("p", {
             staticClass: "content"
-        }, [t._v(t._s(t.$t("Chicken.body.RuleChampingbody")))])])])])], 1), t._v(" "), r("div", {
+        }, [t._v(t._s(t.$t("Grabland.body.RuleChampingbody")))])])])])], 1), t._v(" "), r("div", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41995,7 +41995,7 @@
                     t.tradeTab = 0
                 }
             }
-        }, [r("span", [t._v(t._s(t.$t("Chicken.Card.Card1.Buy")))])]), t._v(" "), r("b-nav-item", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.Card.Card1.Buy")))])]), t._v(" "), r("b-nav-item", {
             class: {
                 active: 1 == t.tradeTab
             },
@@ -42004,7 +42004,7 @@
                     t.tradeTab = 1
                 }
             }
-        }, [r("span", [t._v(t._s(t.$t("Chicken.Card.Card1.Income")))])])], 1), t._v(" "), r("div", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.Card.Card1.Income")))])])], 1), t._v(" "), r("div", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -42045,7 +42045,7 @@
             staticClass: "gray-panel"
         }, [r("p", {
             staticClass: "line1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.BuyMind")) + t._s(t.buyAmount) + "HXC")]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.BuyMind")) + t._s(t.buyAmount) + "HXC")]), t._v(" "), r("p", {
             staticClass: "line2"
         }, [t._v("1 HXC ≈ " + t._s(t.hxcPrice) + " EOS")])]), t._v(" "), r("div", {
             staticClass: "buy-button-container"
@@ -42105,14 +42105,14 @@
         }, [r("div", {
             staticClass: "buy-button"
         }, [r("div", [t._v(" + 8888")])])])], 1)], 1), t._v(" "), r("div", {
-            staticClass: "btn btn-block trade-chicken",
+            staticClass: "btn btn-block trade-grabland",
             class: {
                 loading: t.isLoading
             },
             on: {
                 click: t.buy
             }
-        }, [t._v("\n                            " + t._s(t.$t("Chicken.Card.Card1.Buy"))), r("span", {
+        }, [t._v("\n                            " + t._s(t.$t("Grabland.Card.Card1.Buy"))), r("span", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -42129,7 +42129,7 @@
             staticClass: "withdraw"
         }, [r("div", {
             staticClass: "title"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.Incomestatistics")) + "\n                            "), r("img", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.Incomestatistics")) + "\n                            "), r("img", {
             attrs: {
                 src: n(48)
             }
@@ -42137,7 +42137,7 @@
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.dividendincome")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.dividendincome")))]), t._v(" "), r("td", {
             staticClass: "t2"
         }, [r("span", [t._v(t._s(t.dividend) + " "), r("img", {
             attrs: {
@@ -42147,7 +42147,7 @@
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.InviterReward")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.InviterReward")))]), t._v(" "), r("td", {
             staticClass: "t2"
         }, [r("span", [t._v(t._s(t.saleReward) + " "), r("img", {
             attrs: {
@@ -42157,7 +42157,7 @@
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.MyAirdrop")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.MyAirdrop")))]), t._v(" "), r("td", {
             staticClass: "t2"
         }, [r("span", [t._v(t._s(t.airDropCanGet + t.airDropWait) + " "), r("img", {
             attrs: {
@@ -42165,15 +42165,15 @@
             }
         })])])]), t._v(" "), r("tr", [r("td"), t._v(" "), r("td", {
             staticClass: "t3"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.unlock")) + " " + t._s(t.airDropCanGet) + " EOS / "), r("span", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.unlock")) + " " + t._s(t.airDropCanGet) + " EOS / "), r("span", {
             staticClass: "gray"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.lock")) + " " + t._s(t.airDropWait) + " EOS")])])])]), t._v(" "), r("div", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.lock")) + " " + t._s(t.airDropWait) + " EOS")])])])]), t._v(" "), r("div", {
             staticClass: "dotted-line"
         }), t._v(" "), r("table", {
             staticClass: "r3"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.TotalReward")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.TotalReward")))]), t._v(" "), r("td", {
             staticClass: "total-withdraw",
             attrs: {
                 cols: "8"
@@ -42186,7 +42186,7 @@
             on: {
                 click: t.withdraw
             }
-        }, [t._v("\n                            " + t._s(t.$t("Chicken.Card.Card1.Withdraw")) + " "), r("span", {
+        }, [t._v("\n                            " + t._s(t.$t("Grabland.Card.Card1.Withdraw")) + " "), r("span", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -42209,7 +42209,7 @@
                     t.accountTab = 0
                 }
             }
-        }, [r("span", [t._v(t._s(t.$t("Chicken.Card.Card2.Round")))])]), t._v(" "), r("b-nav-item", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.Card.Card2.Round")))])]), t._v(" "), r("b-nav-item", {
             class: {
                 active: 1 == t.accountTab
             },
@@ -42218,7 +42218,7 @@
                     t.accountTab = 1
                 }
             }
-        }, [r("span", [t._v(t._s(t.$t("Chicken.Card.Card2.Transaction")))])])], 1), t._v(" "), r("div", {
+        }, [r("span", [t._v(t._s(t.$t("Grabland.Card.Card2.Transaction")))])])], 1), t._v(" "), r("div", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -42243,7 +42243,7 @@
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card2.TobalInvestment")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card2.TobalInvestment")))]), t._v(" "), r("td", {
             staticClass: "t2"
         }, [r("span", [t._v(t._s(t.totalPool) + " "), r("img", {
             attrs: {
@@ -42253,7 +42253,7 @@
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card2.PrizePool")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card2.PrizePool")))]), t._v(" "), r("td", {
             staticClass: "t2"
         }, [r("span", [t._v(t._s(t.lastRewardPool) + " "), r("img", {
             attrs: {
@@ -42263,7 +42263,7 @@
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card2.Bullets")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card2.Bullets")))]), t._v(" "), r("td", {
             staticClass: "t2"
         }, [r("span", [t._v(t._s(t.balance) + " "), r("img", {
             attrs: {
@@ -42273,7 +42273,7 @@
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.MyHuoXinCoin")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Grabland.Card.Card1.MyHuoXinCoin")))]), t._v(" "), r("td", {
             staticClass: "t2"
         }, [r("span", [t._v(t._s(t.hxcAmount) + " "), r("img", {
             attrs: {
@@ -42295,7 +42295,7 @@
                 expression: "accountTab==1"
             }],
             staticClass: "realtime"
-        }, [r("table", [r("thead", [r("td", [t._v(t._s(t.$t("Chicken.body.Player")))]), t._v(" "), r("td", [t._v(t._s(t.$t("Chicken.body.Time")))]), t._v(" "), r("td", [t._v(t._s(t.$t("Chicken.body.Amount")))]), t._v(" "), r("td")]), t._v(" "), r("tbody", t._l(t.tradeInfo, function(e) {
+        }, [r("table", [r("thead", [r("td", [t._v(t._s(t.$t("Grabland.body.Player")))]), t._v(" "), r("td", [t._v(t._s(t.$t("Grabland.body.Time")))]), t._v(" "), r("td", [t._v(t._s(t.$t("Grabland.body.Amount")))]), t._v(" "), r("td")]), t._v(" "), r("tbody", t._l(t.tradeInfo, function(e) {
             return r("tr", [r("td", [t._v(t._s(e.player.slice(0, 5) + "***"))]), t._v(" "), r("td", [t._v(t._s(new Date(e.time / 1e3).toLocaleDateString()) + " " + t._s(new Date(e.time / 1e3).toTimeString().split(" ")[0]))]), t._v(" "), r("td", [t._v(t._s(e.amount))]), t._v(" "), r("td", {
                 staticClass: "green"
             }, [t._v("Buy")])])
@@ -42543,16 +42543,16 @@
     t.exports = n.p + "eos_log_b.png?94479db13bb7646c82903038ba1b5885"
 }
 , function(t, e, n) {
-    t.exports = n.p + "luckey_coin.png?eb082f485fcae603d179d32a1067beea"
+    t.exports = n.p + "/new/luckey_coin.png?eb082f485fcae603d179d32a1067beea"
 }
 , function(t, e, n) {
-    t.exports = n.p + "drop_log.png?b0850d065706d4ea20041c6b22e53b87"
+    t.exports = n.p + "/new/drop_log.png?b0850d065706d4ea20041c6b22e53b87"
 }
 , function(t, e, n) {
-    t.exports = n.p + "poison_log.png?8a1a99ac8c8eb6fc91ba032e500fe3c7"
+    t.exports = n.p + "/new/poison_log.png?8a1a99ac8c8eb6fc91ba032e500fe3c7"
 }
 , function(t, e, n) {
-    t.exports = n.p + "bullet_logo.png?94ac6a5dc7f368315c33cf4db8745235"
+    t.exports = n.p + "/new/bullet_logo.png?94ac6a5dc7f368315c33cf4db8745235"
 }
 , function(t, e, n) {
     t.exports = n.p + "eos_log_d.png?7fce37ade8ae677dd72a3eb7ab7450ba"
@@ -42561,7 +42561,7 @@
     t.exports = n.p + "bullet_b.png?b524c5ea639196d881a500d340266ae6"
 }
 , function(t, e, n) {
-    t.exports = n.p + "luckey_coin_a.png?c4226ba67f80911ced773a62da24c5e8"
+    t.exports = n.p + "/new/luckey_coin_a.png?c4226ba67f80911ced773a62da24c5e8"
 }
 , function(t, e, n) {
     "use strict";
@@ -42570,14 +42570,14 @@
           , e = t.$createElement
           , n = t._self._c || e;
         return n("div", {
-            staticClass: "chicken"
-        }, [n("ChickenHD", {
+            staticClass: "Grabland"
+        }, [n("GrablandHD", {
             attrs: {
                 hh: t.hh,
                 mm: t.mm,
                 ss: t.ss
             }
-        }), t._v(" "), n("ChickenBD", {
+        }), t._v(" "), n("GrablandBD", {
             attrs: {
                 hh: t.hh,
                 mm: t.mm,
@@ -42799,7 +42799,7 @@
         zh: {
             NavBar: {
                 Account: "账户",
-                Chicken: "抢地主",
+                Grabland: "抢地主",
                 Monopoly: "大富豪",
 //                Platform: "开放平台",
 //                Raiders: "夺宝奇兵",
@@ -42831,7 +42831,7 @@
                 NumOfPart: "已参与人次",
                 NumOfRest: "剩余人次"
             },
-            Chicken: {
+            Grabland: {
                 head: {
                     Title1: "不要走，决战到天亮吧！",
                     Title2: "绑定钱包，开始抢地主",
@@ -42854,7 +42854,7 @@
                     RuleT6: "块田地",
                     RuleMinhead: "可挖矿",
                     RuleMinbody: "游戏挖矿，双重收益",
-                    RuleDrophead: "抢空投",
+                    RuleDrophead: "抢肥田",
                     RuleDropbody: "拒绝随机，实力抢夺",
                     RuleChampinghead: "决赛圈",
                     RuleChampingbody: "争分夺秒，贴身肉搏",
@@ -42945,7 +42945,7 @@
         en: {
             NavBar: {
                 Account: "Account",
-                Chicken: "E-PUBG",
+                Grabland: "E-PUBG",
                 Monopoly: "Monopoly",
                 Platform: "Developers",
                 Raiders: "Raiders",
@@ -42977,7 +42977,7 @@
                 NumOfPart: "Number of participants",
                 NumOfRest: "Number of the rest players"
             },
-            Chicken: {
+            Grabland: {
                 head: {
                     Title1: "Waiting for Dawn, or Leaving with Dismay in the Dark",
                     Title2: "Bind the address and start the game",
