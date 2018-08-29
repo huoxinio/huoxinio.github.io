@@ -40018,41 +40018,23 @@
             attrs: {
                 to: "/grabland"
             }
-        }, [t._v(t._s(t.$t("NavBar.Grabland")))])], 1)/*, t._v(" "), r("b-nav-item", {
+        }, [t._v(t._s(t.$t("NavBar.Grabland")))])], 1), t._v(" "), r("b-nav-item", {
             staticClass: "top",
-            class: {
-                active: 3 == t.tab
-            },
             attrs: {
-                href: "#"
-            },
+                href: "./promos.html"
+            }
+        }, [r("a", {
+            attrs: {
+                href: "./promos.html",
+            }
+        }, [t._v(t._s(t.$t("加入我们")))])], 1), t._v(" "), r("b-nav-item", {
+        	staticClass: "top",
             on: {
                 click: function(e) {
-                    t.tab = 3
+                    t.showInviter = 1
                 }
             }
-        }, [r("router-link", {
-            attrs: {
-                to: "/raider"
-            }
-        }, [t._v(t._s(t.$t("NavBar.Raiders")))])], 1), t._v(" "), r("b-nav-item", {
-            staticClass: "top",
-            class: {
-                active: 2 == t.tab
-            },
-            attrs: {
-                href: "#"
-            },
-            on: {
-                click: function(e) {
-                    t.tab = 2
-                }
-            }
-        }, [r("router-link", {
-            attrs: {
-                to: "/developer"
-            }
-        }, [t._v(t._s(t.$t("NavBar.Platform")))])], 1)*/], 1), t._v(" "), r("b-navbar-nav", {
+        }, [t._v(t._s(t.$t("邀请好友")))])], 1), t._v(" "), r("b-navbar-nav", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -40127,13 +40109,13 @@
                     t.showInviter = 1
                 }
             }
-        }, [t._v(t._s(t.$t("NavBar.Popularize")))]), t._v(" "), r("b-nav-item", {
+        }, [t._v(t._s(t.$t("NavBar.Popularize")))])/*, t._v(" "), r("b-nav-item", {
             on: {
                 click: function(e) {
                     t.directTo(t.turorialUrl)
                 }
             }
-        }, [t._v(t._s(t.$t("NavBar.Course")))])/*, t._v(" "), r("b-nav-item", {
+        }, [t._v(t._s(t.$t("NavBar.Course")))]), t._v(" "), r("b-nav-item", {
             on: {
                 click: function(e) {
                     t.directTo(t.whitePaperUrl)
@@ -40272,7 +40254,7 @@
             staticClass: "contract"
         }, [r("tr", [r("td", [r("a", {
             attrs: {
-                href: "javascript:t.showInviter = 1;",
+                href: "./promos.html",
             }
         }, [r("img", {
             attrs: {
@@ -40315,7 +40297,7 @@
     e.a = o
 }
 , function(t, e, n) {
-    t.exports = n.p + "Telegram.png?ee3837301cc9fe6ef292af98e0f400d9"
+    t.exports = n.p + "/new/wechat.png?ee3837301cc9fe6ef292af98e0f400d9"
 }
 , function(t, e, n) {
     t.exports = n.p + "Github.png?25550305cff66ba61ccd94d256884969"
@@ -41344,7 +41326,7 @@
 , function(t, e, n) {
     var r = n(62);
     e = t.exports = n(13)(!1),
-    e.push([t.i, ".huoxincoin{background:url(" + r(n(424)) + ");background-size:contain;background-repeat:no-repeat;width:100%}.huoxincoin .hd{font-family:PingFangSC-Medium;text-align:center}.huoxincoin .hd .title{padding-top:8.7rem;color:#fff;font-size:2rem;margin-bottom:1rem}.huoxincoin .hd .header{font-size:1rm;color:#9ca2ad;letter-spacing:0;margin:0 auto;width:90%}.huoxincoin .hd .wallet{width:100%;margin:2rem auto 0;padding:2rem}.huoxincoin .hd .wallet .binding-wallet{background:#fd9800;border-radius:8px;font-size:1.5rem;max-width:30rem;margin:0 auto;color:#fff;letter-spacing:0}.huoxincoin .hd .wallet .no-eos-wallet{color:#fd9800;font-size:1rem;text-align:center;padding:.55rem 0 0;letter-spacing:0;padding-bottom:4rem}.huoxincoin .hd .wallet .no-eos-wallet a{color:#fd9800}.huoxincoin .trade-panel{background:#141a2e;padding-top:4rem;font-family:PingFangSC-Semibold;font-size:1rem;color:#c3baba;letter-spacing:0}.huoxincoin .trade-panel .right{text-align:right}.huoxincoin .trade-panel .bancor{width:70%;margin:0 auto;text-align:center}.huoxincoin .trade-panel .bancor .row{height:10rem}.huoxincoin .trade-panel .bancor .title{font-size:2rem;color:#fff;margin-bottom:2rem}.huoxincoin .trade-panel .bancor .circle img{height:80%;position:relative;margin-top:1rem}.huoxincoin .trade-panel .bancor .pool{height:100%;font-size:1.5rem}.huoxincoin .trade-panel .bancor .up{background:#454a74;color:#fff;height:40%;border-radius:.4rem .4rem 0 0}.huoxincoin .trade-panel .bancor .up img{width:1.6rem;display:inline-block;margin-bottom:.2rem}.huoxincoin .trade-panel .bancor .down{background:#34ae76;color:#fff;height:55%;border-radius:0 0 .4rem .4rem}.huoxincoin .trade-panel .bancor .inner{position:relative;top:30%}.huoxincoin .trade-panel .trade-container{width:80%;margin:0 auto}.huoxincoin .trade-panel .trade-container .predict{margin-bottom:1rem}.huoxincoin .trade-panel .trade{margin:2rem}.huoxincoin .trade-panel .trade .account-info{margin-bottom:1rem}.huoxincoin .trade-panel .trade .input-group.input-group-lg{padding-bottom:2rem}.huoxincoin .trade-panel .trade .button{width:100%;height:3rem;border-radius:.4rem}.huoxincoin .trade-panel .trade .buy{background:#0ec000}.huoxincoin .trade-panel .trade .sell{background:#e45555}.huoxincoin .trade-panel .form-control{border:none}.huoxincoin .trade-panel img.center{display:block;margin:1rem auto}.huoxincoin .trade-panel .alert{position:absolute;width:15rem;margin-top:-2rem;left:50%;margin-left:-7.5rem;opacity:.8;text-align:center}", ""])
+    e.push([t.i, ".huoxincoin{background:url(" + r(n(424)) + ");background-size:contain;background-repeat:no-repeat;width:100%}.huoxincoin .hd{font-family:PingFangSC-Medium;text-align:center}.huoxincoin .hd .title{padding-top:8.7rem;color:#fff;font-size:2rem;margin-bottom:1rem}.huoxincoin .hd .header{font-size:1rm;color:#9ca2ad;letter-spacing:0;margin:0 auto;width:90%}.huoxincoin .hd .wallet{width:100%;margin:2rem auto 0;padding:2rem}.huoxincoin .hd .wallet .binding-wallet{background:#fd9800;border-radius:8px;font-size:1.5rem;max-width:30rem;margin:0 auto;color:#fff;letter-spacing:0}.huoxincoin .hd .wallet .no-eos-wallet{color:#fd9800;font-size:1rem;text-align:center;padding:.55rem 0 0;letter-spacing:0;padding-bottom:4rem}.huoxincoin .hd .wallet .no-eos-wallet a{color:#fd9800}.huoxincoin .trade-panel{background:#141a2e;padding-top:4rem;font-family:PingFangSC-Semibold;font-size:1rem;color:#c3baba;letter-spacing:0}.huoxincoin .trade-panel .right{text-align:right}.huoxincoin .trade-panel .bancor{width:70%;margin:0 auto;text-align:center}.huoxincoin .trade-panel .bancor .row{height:10rem}.huoxincoin .trade-panel .bancor .title{font-size:2rem;color:#fff;margin-bottom:2rem}.huoxincoin .trade-panel .bancor .circle img{height:80%;position:relative;margin-top:1rem}.huoxincoin .trade-panel .bancor .pool{height:100%;font-size:1.5rem}.huoxincoin .trade-panel .bancor .up{background:#454a74;color:#fff;height:40%;border-radius:.4rem .4rem 0 0}.huoxincoin .trade-panel .bancor .up img{width:1.6rem;display:inline-block;margin-bottom:.2rem}.huoxincoin .trade-panel .bancor .down{background:#8649a9;color:#fff;height:55%;border-radius:0 0 .4rem .4rem}.huoxincoin .trade-panel .bancor .inner{position:relative;top:30%}.huoxincoin .trade-panel .trade-container{width:80%;margin:0 auto}.huoxincoin .trade-panel .trade-container .predict{margin-bottom:1rem}.huoxincoin .trade-panel .trade{margin:2rem}.huoxincoin .trade-panel .trade .account-info{margin-bottom:1rem}.huoxincoin .trade-panel .trade .input-group.input-group-lg{padding-bottom:2rem}.huoxincoin .trade-panel .trade .button{width:100%;height:3rem;border-radius:.4rem}.huoxincoin .trade-panel .trade .buy{background:#0ec000}.huoxincoin .trade-panel .trade .sell{background:#e45555}.huoxincoin .trade-panel .form-control{border:none}.huoxincoin .trade-panel img.center{display:block;margin:1rem auto}.huoxincoin .trade-panel .alert{position:absolute;width:15rem;margin-top:-2rem;left:50%;margin-left:-7.5rem;opacity:.8;text-align:center}", ""])
 }
 , function(t, e, n) {
 //  t.exports = n.p + "HXC_BG.jpg?67f0c00df77f62237d4c9f2b32fa8818"
@@ -41654,7 +41636,7 @@
 }
 , function(t, e, n) {
 //  t.exports = n.p + "NEWBG.jpg?40e2d45860562c060c00c483e254a46b"
-  t.exports = n.p + "/new/bg_qdz.png?40e2d45860562c060c00c483e254a46b"
+  t.exports = n.p + "/new/bg_qdzn.jpg?40e2d45860562c060c00c483e254a46b"
 }
 , function(t, e, n) {
     "use strict";
@@ -42558,7 +42540,7 @@
     t.exports = n.p + "eos_log_d.png?7fce37ade8ae677dd72a3eb7ab7450ba"
 }
 , function(t, e, n) {
-    t.exports = n.p + "bullet_b.png?b524c5ea639196d881a500d340266ae6"
+    t.exports = n.p + "/new/bullet_b.png?b524c5ea639196d881a500d340266ae6"
 }
 , function(t, e, n) {
     t.exports = n.p + "/new/luckey_coin_a.png?c4226ba67f80911ced773a62da24c5e8"
@@ -42814,8 +42796,8 @@
                     DividendsOfPromotion: "推广分红",
                     T1: "即刻邀请更多好友来一起游戏！",
                     T2: "你将获得他们购买田地总额的",
-                    T3: "被邀请人购买田地总量＜50,0000颗时，分红为5%",
-                    T4: "被邀请人购买田地总量≥50,0000颗时，分红为10%",
+                    T3: "被邀请人购买田地总量＜50,0000块时，分红为5%",
+                    T4: "被邀请人购买田地总量≥50,0000块时，分红为10%",
                     T5: "复制并分享给你的朋友",
                     T6: "分红"
                 },
@@ -42833,9 +42815,10 @@
             },
             Grabland: {
                 head: {
-                    Title1: "不要走，决战到天亮吧！",
+                    Title1: "决战到天亮吧！",
                     Title2: "绑定钱包，开始抢地主",
-                    Title3: "还没有EOS钱包？点击查看教程",
+//                  Title3: "还没有EOS钱包？点击查看教程",
+                    Title3: "",
                     Title4: "我的田地"
                 },
                 body: {
@@ -42908,7 +42891,8 @@
                 Title3: "我的总HXC量",
                 Head1: "完成这场马拉松式的挖矿游戏，你必须要有“火星探索精神”的勇气，途中必经“探险、陷阱、飞翔、阴谋、传说”五大文明时期。",
                 Button: "绑定钱包，立即加入",
-                NoWallet: "还没有EOS钱包？点击查看教程",
+//              NoWallet: "还没有EOS钱包？点击查看教程",
+                NoWallet: "",
                 Priceline: "价格曲线",
                 Balance: "可用",
                 PriceBuy: "买入价",
@@ -42918,7 +42902,7 @@
                 volume: "预计交易额",
                 Buy: "买入HXC",
                 Sell: "卖出HXC",
-                Bancor: "当前储备金池",
+                Bancor: "当前储备金库",
                 EOSBANCOR: "EOS 储备金 ",
                 HXCBANCOR: "HXC 储备金 "
             },
@@ -42942,151 +42926,7 @@
                 g3author: "By TTNT Team"
             }
         },
-        en: {
-            NavBar: {
-                Account: "Account",
-                Grabland: "E-PUBG",
-                Monopoly: "Monopoly",
-                Platform: "Developers",
-                Raiders: "Raiders",
-                Login: "Login",
-                Popularize: "Promotion",
-                Course: "Course",
-                Statement: "Statement",
-                Whitepaper: "Whitepaper",
-                Language: "Language",
-                My: "My ",
-                promotion: {
-                    DividendsOfPromotion: "Dividends of Promotion",
-                    T1: "Invite more friends to play together! ",
-                    T2: "You will receive ",
-                    T3: "When the invited person purchases no more than 50,000 Bullets, the dividend is 5%.",
-                    T4: "When the invited person purchases more than or just 50,000 Bullets, the dividend is 10%.",
-                    T5: "Copy and share to friends",
-                    T6: " dividents of their purchase amount "
-                },
-                Raider: {
-                    Raiders: "Raiders of the Lost Ark",
-                    CommingSoon: "Comming Soon",
-                    car: " PORSCHE 911",
-                    Value: "Value",
-                    button: "Reservation now",
-                    people: "",
-                    Titele: "The player picks the favorite prize. Each prize will be assigned a corresponding unique number. The player consumes a certain number of EOS and can get a number that is randomly assigned by the system. When all the numbers have been assigned, the system will calculate a random HuoXin number according to the rules. The user who holds the number can directly obtain the product, which will be given to the player in the form of equivalent EOS."
-                },
-                NumOfPart: "Number of participants",
-                NumOfRest: "Number of the rest players"
-            },
-            Grabland: {
-                head: {
-                    Title1: "Waiting for Dawn, or Leaving with Dismay in the Dark",
-                    Title2: "Bind the address and start the game",
-                    Title3: "Without EOS address please click to view the tutorial",
-                    Title4: "My bullet"
-                },
-                body: {
-                    Rule: "E-PUBG",
-                    AirDrop: "Air Drop",
-                    Mining: "Mining",
-                    Title21: "Still need",
-                    Title22: "Bullets",
-                    Title3: "AirDrop Box",
-                    Times: "Times",
-                    RuleT1: "The total duration of the game is 24 hours. Each time you purchase Bullets, the game time will be increased. The upper limit does not exceed the starting time.",
-                    RuleT2: "As the game progresses, the price of Bullets increases, and the game time added by each Bullets decreases.",
-                    RuleT3: "The EOS accumulated by selling Bullets will be distributed to the holder of Bullets in proportion, and the last Bullets purchaser will win the ultimate prize.",
-                    RuleT4: "{numBullet} bullets are still needed to the next airdrop",
-                    RuleT5: "Current sold {bulletAmount},+{bulletTime}/bullet",
-                    RuleT6: "",
-                    RuleMinhead: "Able to Mine",
-                    RuleMinbody: "Trade in mining, get double income",
-                    RuleDrophead: "Scramble for air-drop",
-                    RuleDropbody: "Refuse random, just to fight",
-                    RuleChampinghead: "Final Round",
-                    RuleChampingbody: "Race against time, fight high-to-hand",
-                    MiningT1: "Each time you purchase Bullets, the system will send the same amount of HXC currency on the HuoXin platform to the player.",
-                    MiningT2: "20% of all game sales on the HuoXin platform will be injected into the Bancor pool. After holding HXC, you can wait for the price to increase and get your dividends.",
-                    MiningT3: "The platform has built intelligent trading system based on Bancor engine, and the obtained HXC can be bought and sold directly on the platform.",
-                    MiningT4: "Current Stage",
-                    MiningT5: "Current HXC price",
-                    MiningT6: "1 HXC ≈ {hxcPrice} EOS",
-                    DropT1: "The game is divided into 6 stages according to the total amount of sold Bullets. The air-drop will start each time 100,000 Bullets are sold.",
-                    DropT2: "Users who purchase the N * 100000 Bullets will receive a reward (N=1, 2, 3...) until the 31,000,000 Bullets is sold. ",
-                    DropT3: "As the game progresses, each airdrop will increase the reward.",
-                    Player: "Player",
-                    Time: "Time",
-                    Amount: "Amount"
-                },
-                Card: {
-                    Card1: {
-                        Withdraw: "Withdraw",
-                        BuyButton: "Buy with EOS",
-                        BuyMind: "After buying Bullets this time,You could get ",
-                        Rule: "Some Rules",
-                        Incomestatistics: "E-PUGB Statistics",
-                        dividendincome: "Dividend Income",
-                        InviterReward: "Inviting Awards",
-                        MyHuoXinCoin: "My HXC",
-                        MyAirdrop: "My Airdrop",
-                        TotalReward: "Total Income",
-                        Buy: "BUY",
-                        Income: "INCOME",
-                        lock: "Locked",
-                        unlock: "Unlocked"
-                    },
-                    Card2: {
-                        Round: "PROGRESS",
-                        Transaction: "TRANSACTION",
-                        TobalInvestment: "Total investment",
-                        PrizePool: "Current prize pool",
-                        Reward: "Reward",
-                        Bullets: "My Bullets",
-                        Income: "My Income",
-                        Player: "Player",
-                        Time: "Time",
-                        amount: "Amount"
-                    }
-                }
-            },
-            Token: {
-                Title1: "Fair Transparent Desentralization",
-                Title2: "Next-Generation Gaming Platform Based on EOS Intelligent Contract",
-                Title3: "My HXC",
-                Head1: 'The user plays the game in the HuoXin platform, and can obtain the corresponding proportion of the platform currency HXC through the form of "game is mining". All of HuoXin\'s games will continue to inject funds into the HXC reserve pool to keep HXC value up and never break. HXC holders will be able to enjoy the dividends of all games in the platform. At the same time, the platform is based on the self-developed Bancor algorithm engine, which creates a decentralized trading platform, enabling HXC to conduct direct transactions within the platform.',
-                Button: "Bind wallet to join us",
-                Priceline: "Price Chart",
-                Balance: "Available",
-                PriceBuy: "Price",
-                PriceSell: "Price",
-                AmountBuy: " volume",
-                AmountSell: "volume ",
-                volume: "Expected Get ",
-                Buy: "Buy HXC",
-                Sell: "Sell HXC",
-                Bancor: "Current Reserve Pool",
-                EOSBANCOR: "EOS Reserve ",
-                HXCBANCOR: "HXC Reserve "
-            },
-            PlatForm: {
-                Title1: "Let’s work together to make the platform of HuoXin more brilliant and interesting!",
-                title2: "Some Information",
-                body1: "Join the camp of HuoXin developers right now and build a decentralized game economic system with us hand in hand. Share joy with more users and maximize your value in the game.",
-                body2: "To get more developers' information, become a member of HuoXin early bird developer team.",
-                body3: "As a developer , what cant you get?",
-                body4: "Continuously growing new users",
-                body5: "Uniform settlement token with high liquidity and convenience",
-                body6: "Offering high value-added airdrop Awards",
-                body7: "A shared Bancor pool of the platform, and a package of monetary systems for the building and prosperity of huoxin game platform",
-                head: "★ Coming Soon ★",
-                contactus: "Contact Us",
-                g1name: "Lottery",
-                g1author: "By FireMan Team",
-                g2name: "Turntable",
-                g2author: "By FOX Team",
-                g3name: "Slots",
-                g3author: "By TTNT Team"
-            }
-        }
+        en: {}
     };
     t.exports = n
 }
@@ -43094,4 +42934,3 @@
 , function(t, e) {}
 , function(t, e) {}
 ]);
-//# sourceMappingURL=build.js.map
