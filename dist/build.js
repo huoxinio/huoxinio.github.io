@@ -40021,11 +40021,13 @@
         }, [t._v(t._s(t.$t("NavBar.Grabland")))])], 1), t._v(" "), r("b-nav-item", {
             staticClass: "top",
             attrs: {
-                href: "./promos.html"
+                href: "./promos.html",
+                target: "_blank"
             }
         }, [r("a", {
             attrs: {
                 href: "./promos.html",
+                target: "_blank"
             }
         }, [t._v(t._s(t.$t("加入我们")))])], 1), t._v(" "), r("b-nav-item", {
         	staticClass: "top",
@@ -40255,6 +40257,7 @@
         }, [r("tr", [r("td", [r("a", {
             attrs: {
                 href: "./promos.html",
+                target: "_blank"
             }
         }, [r("img", {
             attrs: {
