@@ -2700,7 +2700,7 @@
     }
     var i = n(74)
       , o = n(138)
-      , a = i.env.luckyCoinContract
+      , a = i.env.huoxinCoinContract
       , s = i.env.chickenContract
       , u = i.env.tokenpoolContract
       , l = i.env.scatterConfig
@@ -2724,7 +2724,7 @@
             code: a,
             table: "accounts"
         }).then(function(t) {
-            n(t.rows[0] ? t.rows[0].balance : "0 LKT")
+            n(t.rows[0] ? t.rows[0].balance : "0 HXC")
         })
     }
       , h = function(t, e, n) {
@@ -2797,7 +2797,7 @@
         }).then(function(t, e) {
             n(e)
         }).catch(function(t) {
-            r("Buy Lucky coin failed", t.toString()),
+            r("Buy HuoXin coin failed", t.toString()),
             i(t)
         })
     }
@@ -2821,12 +2821,12 @@
           , s = t.identity.accounts[0].name
           , l = t.identity.accounts[0].authority;
         o.contract(a).then(function(t) {
-            t.transfer(s, u, e, "sell lucky coin", {
+            t.transfer(s, u, e, "sell huoxin coin", {
                 authorization: [s + "@" + l]
             }).then(function(t) {
                 n(t)
             }).catch(function(t) {
-                r("Sell lucky coin failed", t.toString()),
+                r("Sell huoxin coin failed", t.toString()),
                 i(t)
             })
         })
@@ -2860,13 +2860,13 @@
       , A = {
         getTokenMarket: c,
         getEOS: d,
-        getLKTToken: f,
+        getHXCToken: f,
         getGlobalStatus: p,
         getGameStatus: m,
-        buyLuckyCoin: b,
+        buyHuoXinCoin: b,
         buyBullet: y,
         withdraw: w,
-        sellLuckyCoin: _,
+        sellHuoXinCoin: _,
         getIdentity: E,
         getUserInfo: g,
         getAccount: h,
@@ -8211,7 +8211,7 @@
                 httpEndpoint: "https://api1.eosasia.one",
                 expireInSeconds: 60
             },
-            luckyCoinContract: "coinhuoxinio",
+            huoxinCoinContract: "coinhuoxinio",
             tokenpoolContract: "bctphuoxinio",
             chickenContract: "qdzghuoxinio"
         }
@@ -8230,14 +8230,14 @@
                 httpEndpoint: "http://192.168.153.140:8888",
                 expireInSeconds: 60
             },
-            luckyCoinContract: "coinhuoxinio",
+            huoxinCoinContract: "coinhuoxinio",
             tokenpoolContract: "bctphuoxinio",
             chickenContract: "qdzghuoxinio"
         }
     }();
     t.exports = {
-          env: r
-//          env: rDev
+//          env: r
+          env: rDev
     }
 }
 , function(t, e, n) {
@@ -12261,8 +12261,8 @@
             function t() {
                 if (e.identity) {
                     var n = e.identity.accounts[0].name;
-                    a.actions.getLKTToken(e, n, function(t) {
-                        e.lktAmount = t
+                    a.actions.getHXCToken(e, n, function(t) {
+                        e.hxcAmount = t
                     }),
                     a.actions.getEOS(e, n, function(t) {
                         e.eosAmount = t
@@ -12281,7 +12281,7 @@
                       , i = 1e4 * parseFloat(n.base.balance.split(" ")[0])
                       , o = 1e4 * parseFloat(n.quote.balance.split(" ")[0])
                       , a = i * (Math.pow(1 + 1 / (1 + o), r) - 1);
-                    e.lktPrice = parseInt(1 / a * 1e4) / 1e4
+                    e.hxcPrice = parseInt(1 / a * 1e4) / 1e4
                 }),
                 a.actions.getGlobalStatus(e, function(t) {
                     e.globalStatus = t.rows[0]
@@ -12305,7 +12305,7 @@
     n(30));
     n.n(i);
     e.a = {
-        name: "luckynav",
+        name: "huoxinnav",
         data: function() {
             return {
                 hasScatter: !1,
@@ -12316,11 +12316,11 @@
             }
         },
         computed: {
-            showLocale: function() {
-                return "zh" == this.locale ? "中文" : "English"
-            },
+//            showLocale: function() {
+//                return "zh" == this.locale ? "中文" : "English"
+//            },
             turorialUrl: function() {
-                return "zh" == this.locale ? "https://www.luckywith.me/dist/%E6%95%99%E7%A8%8B.pdf" : "https://www.luckywith.me/dist/Tutorial.pdf"
+                return "/dist/%E6%95%99%E7%A8%8B.pdf"
             },
             whitePaperUrl: function() {
                 return "zh" == this.locale ? "https://www.luckywith.me/dist/Lucky%E5%B9%B3%E5%8F%B0%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf" : "https://www.luckywith.me/dist/Lucky_WhitePaper.pdf"
@@ -12339,7 +12339,7 @@
             },
             auth: function() {
                 var t = this.GLOBAL
-                  , e = (i.actions.getLKTToken,
+                  , e = (i.actions.getHXCToken,
                 i.actions.getEOS,
                 this);
                 i.actions.getIdentity(t, function() {
@@ -12360,7 +12360,7 @@
             }
         },
         created: function() {
-            "/luckycoin" == this.$route.path ? this.tab = 1 : "/developer" == this.$route.path ? this.tab = 2 : "/raider" == this.$route.path ? this.tab = 3 : this.tab = 0,
+            "/huoxincoin" == this.$route.path ? this.tab = 1 : "/developer" == this.$route.path ? this.tab = 2 : "/raider" == this.$route.path ? this.tab = 3 : this.tab = 0,
             this.locale = this._i18n.locale;
             var t = this.GLOBAL
               , e = this;
@@ -16400,11 +16400,11 @@
     var r = n(30);
     n.n(r);
     e.a = {
-        name: "luckycoin",
+        name: "huoxincoin",
         data: function() {
             return {
                 eosAmount: 0,
-                lktAmount: "0 LKT",
+                hxcAmount: "0 HXC",
                 sellAmount: 0,
                 buyAmount: 0,
                 dismissCountDown: 0,
@@ -16421,7 +16421,7 @@
                 teamReserved: 2e12,
                 selled: 0,
                 max: 1e13,
-                lktPrice: 0,
+                hxcPrice: 0,
                 accountName: "",
                 isLoading: 0
             }
@@ -16433,7 +16433,7 @@
             whitePaperUrl: function() {
                 return "zh" == this._i18n.locale ? "https://www.luckywith.me/dist/Lucky%E5%B9%B3%E5%8F%B0%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf" : "https://www.luckywith.me/dist/Lucky_WhitePaper.pdf"
             },
-            predictLKTAmount: function() {
+            predictHXCAmount: function() {
                 if (this.bancor) {
                     var t = parseFloat(this.bancor.base.weight) * parseFloat(this.bancor.quote.weight) / 1e6
                       , e = 1e4 * parseFloat(this.bancor.base.balance.split(" ")[0])
@@ -16457,9 +16457,9 @@
             var t = this.GLOBAL
               , e = this
               , n = function() {
-                t.lktPrice && (e.lktPrice = t.lktPrice),
+                t.hxcPrice && (e.hxcPrice = t.hxcPrice),
                 t.eosAmount && (e.eosAmount = t.eosAmount),
-                t.lktAmount && (e.lktAmount = t.lktAmount),
+                t.hxcAmount && (e.hxcAmount = t.hxcAmount),
                 t.bancor && (e.bancor = t.bancor),
                 t.accountName && (e.accountName = t.accountName)
             };
@@ -16475,9 +16475,9 @@
                     e.accountName = t.accountName
                 })
             },
-            buyLuckyCoin: function() {
+            buyHuoXinCoin: function() {
                 var t = (Math.floor(1e4 * this.buyAmount) / 1e4).toFixed(4) + " EOS"
-                  , e = r.actions.buyLuckyCoin
+                  , e = r.actions.buyHuoXinCoin
                   , n = this;
                 this.isLoading || (this.isLoading = 1,
                 e(this.GLOBAL, t, function(t) {
@@ -16488,9 +16488,9 @@
                     n.isLoading = 0
                 }))
             },
-            sellLuckyCoin: function() {
-                var t = (Math.floor(1e4 * this.sellAmount) / 1e4).toFixed(4) + " LKT"
-                  , e = r.actions.sellLuckyCoin
+            sellHuoXinCoin: function() {
+                var t = (Math.floor(1e4 * this.sellAmount) / 1e4).toFixed(4) + " HXC"
+                  , e = r.actions.sellHuoXinCoin
                   , n = this;
                 this.isLoading || (this.isLoading = 1,
                 e(this.GLOBAL, t, function(t) {
@@ -16618,14 +16618,14 @@
                 numBullet: 0,
                 bulletTime: "16s",
                 airdropBox: 0,
-                lktPrice: 0,
+                hxcPrice: 0,
                 eosAmount: 0,
                 gameId: 1,
                 dividend: 0,
                 airDropCanGet: 0,
                 airDropWait: 0,
                 balance: 0,
-                lktAmount: 0,
+                hxcAmount: 0,
                 saleReward: 0,
                 supply: 0,
                 totalPool: 0,
@@ -16685,9 +16685,9 @@
             var t = this.GLOBAL
               , e = this;
             setInterval(function() {
-                if (t.lktPrice && (e.lktPrice = t.lktPrice),
+                if (t.hxcPrice && (e.hxcPrice = t.hxcPrice),
                 t.eosAmount && (e.eosAmount = t.eosAmount),
-                t.lktAmount && (e.lktAmount = parseFloat(t.lktAmount.split(" ")[0])),
+                t.hxcAmount && (e.hxcAmount = parseFloat(t.hxcAmount.split(" ")[0])),
                 t.userInfo && t.gameStatus) {
                     var n = t.userInfo.balance;
                     e.balance = n;
@@ -16842,7 +16842,7 @@
         path: "/",
         component: l.a
     }, {
-        path: "/luckycoin",
+        path: "/huoxincoin",
         component: u.a
     }, {
         path: "/chicken",
@@ -16861,7 +16861,8 @@
     console.log(v.a),
     r.a.use(s.a);
     var E = new s.a({
-        locale: "en",
+//      locale: "en",
+        locale: "zh",
         messages: v.a
     });
     r.a.use(o.a),
@@ -33023,7 +33024,7 @@
         _resolved: "https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz",
         _shasum: "9c665a95f88b8b08fc05cfd731f561859d725825",
         _spec: "bigi@^1.4.2",
-        _where: "/Users/jr/code/exp/luckyPlaza/frontend/node_modules/eosjs-ecc",
+        _where: "/Users/jr/code/exp/huoxinPlaza/frontend/node_modules/eosjs-ecc",
         bugs: {
             url: "https://github.com/cryptocoinjs/bigi/issues"
         },
@@ -40001,9 +40002,9 @@
             }
         }, [r("router-link", {
             attrs: {
-                to: "/luckycoin"
+                to: "/huoxincoin"
             }
-        }, [t._v("LKT")])], 1), t._v(" "), r("b-nav-item", {
+        }, [t._v("HXC")])], 1), t._v(" "), r("b-nav-item", {
             staticClass: "top",
             class: {
                 active: 0 == t.tab
@@ -40017,7 +40018,7 @@
             attrs: {
                 to: "/chicken"
             }
-        }, [t._v(t._s(t.$t("NavBar.Chicken")))])], 1), t._v(" "), r("b-nav-item", {
+        }, [t._v(t._s(t.$t("NavBar.Chicken")))])], 1)/*, t._v(" "), r("b-nav-item", {
             staticClass: "top",
             class: {
                 active: 3 == t.tab
@@ -40051,7 +40052,7 @@
             attrs: {
                 to: "/developer"
             }
-        }, [t._v(t._s(t.$t("NavBar.Platform")))])], 1)], 1), t._v(" "), r("b-navbar-nav", {
+        }, [t._v(t._s(t.$t("NavBar.Platform")))])], 1)*/], 1), t._v(" "), r("b-navbar-nav", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -40112,7 +40113,7 @@
             }
         }, [r("router-link", {
             attrs: {
-                to: "/luckycoin"
+                to: "/huoxincoin"
             }
         }, [t._v("\n                        " + t._s(t.accountName) + "  \n                    ")]), t._v(" "), r("img", {
             attrs: {
@@ -40132,7 +40133,7 @@
                     t.directTo(t.turorialUrl)
                 }
             }
-        }, [t._v(t._s(t.$t("NavBar.Course")))]), t._v(" "), r("b-nav-item", {
+        }, [t._v(t._s(t.$t("NavBar.Course")))])/*, t._v(" "), r("b-nav-item", {
             on: {
                 click: function(e) {
                     t.directTo(t.whitePaperUrl)
@@ -40163,7 +40164,7 @@
                     t.changeLocale("en")
                 }
             }
-        }, [t._v("English")])], 2)], 1), t._v(" "), r("div", {
+        }, [t._v("English")])], 2)*/], 1), t._v(" "), r("div", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -40271,8 +40272,7 @@
             staticClass: "contract"
         }, [r("tr", [r("td", [r("a", {
             attrs: {
-                href: "https://t.me/LuckyPlaza",
-                target: "_blank"
+                href: "javascript:t.showInviter = 1;",
             }
         }, [r("img", {
             attrs: {
@@ -40281,7 +40281,7 @@
             }
         })])]), t._v(" "), r("td", [r("a", {
             attrs: {
-                href: "https://github.com/LuckyPlaza",
+                href: "https://github.com/huoxinio",
                 target: "_blank"
             }
         }, [r("img", {
@@ -40291,7 +40291,7 @@
             }
         })])]), t._v(" "), r("td", [r("a", {
             attrs: {
-                href: "mailto:luckyplazaoffice@gmail.com"
+                href: "mailto:huoxinio@outlook.com"
             }
         }, [r("img", {
             attrs: {
@@ -40305,7 +40305,7 @@
             }
         }), t._v(" "), r("p", {
             staticClass: "copyright"
-        }, [t._v("Copyright 2018. "), r("span", [t._v("CASH Team")])])])
+        }, [t._v("Copyright 2018. "), r("span", [t._v("HUOXIN Team")])])])
     }
     ]
       , o = {
@@ -41344,10 +41344,11 @@
 , function(t, e, n) {
     var r = n(62);
     e = t.exports = n(13)(!1),
-    e.push([t.i, ".luckycoin{background:url(" + r(n(424)) + ");background-size:contain;background-repeat:no-repeat;width:100%}.luckycoin .hd{font-family:PingFangSC-Medium;text-align:center}.luckycoin .hd .title{padding-top:8.7rem;color:#fff;font-size:2rem;margin-bottom:1rem}.luckycoin .hd .header{font-size:1rm;color:#9ca2ad;letter-spacing:0;margin:0 auto;width:90%}.luckycoin .hd .wallet{width:100%;margin:2rem auto 0;padding:2rem}.luckycoin .hd .wallet .binding-wallet{background:#fd9800;border-radius:8px;font-size:1.5rem;max-width:30rem;margin:0 auto;color:#fff;letter-spacing:0}.luckycoin .hd .wallet .no-eos-wallet{color:#fd9800;font-size:1rem;text-align:center;padding:.55rem 0 0;letter-spacing:0;padding-bottom:4rem}.luckycoin .hd .wallet .no-eos-wallet a{color:#fd9800}.luckycoin .trade-panel{background:#141a2e;padding-top:4rem;font-family:PingFangSC-Semibold;font-size:1rem;color:#c3baba;letter-spacing:0}.luckycoin .trade-panel .right{text-align:right}.luckycoin .trade-panel .bancor{width:70%;margin:0 auto;text-align:center}.luckycoin .trade-panel .bancor .row{height:10rem}.luckycoin .trade-panel .bancor .title{font-size:2rem;color:#fff;margin-bottom:2rem}.luckycoin .trade-panel .bancor .circle img{height:80%;position:relative;margin-top:1rem}.luckycoin .trade-panel .bancor .pool{height:100%;font-size:1.5rem}.luckycoin .trade-panel .bancor .up{background:#454a74;color:#fff;height:40%;border-radius:.4rem .4rem 0 0}.luckycoin .trade-panel .bancor .up img{width:1.6rem;display:inline-block;margin-bottom:.2rem}.luckycoin .trade-panel .bancor .down{background:#34ae76;color:#fff;height:55%;border-radius:0 0 .4rem .4rem}.luckycoin .trade-panel .bancor .inner{position:relative;top:30%}.luckycoin .trade-panel .trade-container{width:80%;margin:0 auto}.luckycoin .trade-panel .trade-container .predict{margin-bottom:1rem}.luckycoin .trade-panel .trade{margin:2rem}.luckycoin .trade-panel .trade .account-info{margin-bottom:1rem}.luckycoin .trade-panel .trade .input-group.input-group-lg{padding-bottom:2rem}.luckycoin .trade-panel .trade .button{width:100%;height:3rem;border-radius:.4rem}.luckycoin .trade-panel .trade .buy{background:#0ec000}.luckycoin .trade-panel .trade .sell{background:#e45555}.luckycoin .trade-panel .form-control{border:none}.luckycoin .trade-panel img.center{display:block;margin:1rem auto}.luckycoin .trade-panel .alert{position:absolute;width:15rem;margin-top:-2rem;left:50%;margin-left:-7.5rem;opacity:.8;text-align:center}", ""])
+    e.push([t.i, ".huoxincoin{background:url(" + r(n(424)) + ");background-size:contain;background-repeat:no-repeat;width:100%}.huoxincoin .hd{font-family:PingFangSC-Medium;text-align:center}.huoxincoin .hd .title{padding-top:8.7rem;color:#fff;font-size:2rem;margin-bottom:1rem}.huoxincoin .hd .header{font-size:1rm;color:#9ca2ad;letter-spacing:0;margin:0 auto;width:90%}.huoxincoin .hd .wallet{width:100%;margin:2rem auto 0;padding:2rem}.huoxincoin .hd .wallet .binding-wallet{background:#fd9800;border-radius:8px;font-size:1.5rem;max-width:30rem;margin:0 auto;color:#fff;letter-spacing:0}.huoxincoin .hd .wallet .no-eos-wallet{color:#fd9800;font-size:1rem;text-align:center;padding:.55rem 0 0;letter-spacing:0;padding-bottom:4rem}.huoxincoin .hd .wallet .no-eos-wallet a{color:#fd9800}.huoxincoin .trade-panel{background:#141a2e;padding-top:4rem;font-family:PingFangSC-Semibold;font-size:1rem;color:#c3baba;letter-spacing:0}.huoxincoin .trade-panel .right{text-align:right}.huoxincoin .trade-panel .bancor{width:70%;margin:0 auto;text-align:center}.huoxincoin .trade-panel .bancor .row{height:10rem}.huoxincoin .trade-panel .bancor .title{font-size:2rem;color:#fff;margin-bottom:2rem}.huoxincoin .trade-panel .bancor .circle img{height:80%;position:relative;margin-top:1rem}.huoxincoin .trade-panel .bancor .pool{height:100%;font-size:1.5rem}.huoxincoin .trade-panel .bancor .up{background:#454a74;color:#fff;height:40%;border-radius:.4rem .4rem 0 0}.huoxincoin .trade-panel .bancor .up img{width:1.6rem;display:inline-block;margin-bottom:.2rem}.huoxincoin .trade-panel .bancor .down{background:#34ae76;color:#fff;height:55%;border-radius:0 0 .4rem .4rem}.huoxincoin .trade-panel .bancor .inner{position:relative;top:30%}.huoxincoin .trade-panel .trade-container{width:80%;margin:0 auto}.huoxincoin .trade-panel .trade-container .predict{margin-bottom:1rem}.huoxincoin .trade-panel .trade{margin:2rem}.huoxincoin .trade-panel .trade .account-info{margin-bottom:1rem}.huoxincoin .trade-panel .trade .input-group.input-group-lg{padding-bottom:2rem}.huoxincoin .trade-panel .trade .button{width:100%;height:3rem;border-radius:.4rem}.huoxincoin .trade-panel .trade .buy{background:#0ec000}.huoxincoin .trade-panel .trade .sell{background:#e45555}.huoxincoin .trade-panel .form-control{border:none}.huoxincoin .trade-panel img.center{display:block;margin:1rem auto}.huoxincoin .trade-panel .alert{position:absolute;width:15rem;margin-top:-2rem;left:50%;margin-left:-7.5rem;opacity:.8;text-align:center}", ""])
 }
 , function(t, e, n) {
-    t.exports = n.p + "LKT_BG.jpg?67f0c00df77f62237d4c9f2b32fa8818"
+//  t.exports = n.p + "HXC_BG.jpg?67f0c00df77f62237d4c9f2b32fa8818"
+  t.exports = n.p + "bg_bctp.jpg?67f0c00df77f62237d4c9f2b32fa8818"
 }
 , function(t, e, n) {
     "use strict";
@@ -41356,7 +41357,7 @@
           , e = t.$createElement
           , r = t._self._c || e;
         return r("div", {
-            staticClass: "luckycoin"
+            staticClass: "huoxincoin"
         }, [r("div", {
             staticClass: "hd"
         }, [r("p", {
@@ -41387,7 +41388,7 @@
             staticStyle: {
                 "margin-bottom": "6rem"
             }
-        }, [t._v("\n                " + t._s(t.$t("Token.Title3")) + ": " + t._s(t.lktAmount.split(" ")[0]) + " ")]), t._v(" "), r("p", {
+        }, [t._v("\n                " + t._s(t.$t("Token.Title3")) + ": " + t._s(t.hxcAmount.split(" ")[0]) + " ")]), t._v(" "), r("p", {
             directives: [{
                 name: "show",
                 rawName: "v-show",
@@ -41456,7 +41457,7 @@
             staticClass: "up"
         }, [r("div", {
             staticClass: "inner"
-        }, [t._v(t._s(t.$t("Token.LKTBANCOR")) + " "), r("img", {
+        }, [t._v(t._s(t.$t("Token.HXCBANCOR")) + " "), r("img", {
             attrs: {
                 src: n(428)
             }
@@ -41481,14 +41482,14 @@
                 type: "number",
                 min: "0.0000",
                 disabled: "",
-                value: "lktPrice"
+                value: "hxcPrice"
             },
             model: {
-                value: t.lktPrice,
+                value: t.hxcPrice,
                 callback: function(e) {
-                    t.lktPrice = e
+                    t.hxcPrice = e
                 },
-                expression: "lktPrice"
+                expression: "hxcPrice"
             }
         }), t._v(" "), r("b-input-group-append", [r("div", {
             staticClass: "input-group-text"
@@ -41515,7 +41516,7 @@
             staticClass: "input-group-text"
         }, [t._v("EOS")])])], 1), t._v(" "), r("div", {
             staticClass: "predict"
-        }, [t._v(t._s(t.$t("Token.volume")) + " " + t._s(t.predictLKTAmount) + " LKT")]), t._v(" "), r("b-input-group", {
+        }, [t._v(t._s(t.$t("Token.volume")) + " " + t._s(t.predictHXCAmount) + " HXC")]), t._v(" "), r("b-input-group", {
             attrs: {
                 size: "lg"
             }
@@ -41525,13 +41526,13 @@
                 loading: t.isLoading
             },
             on: {
-                click: t.buyLuckyCoin
+                click: t.buyHuoXinCoin
             }
         }, [t._v(t._s(t.$t("Token.Buy")))])], 1)], 1)]), t._v(" "), r("b-col", [r("div", {
             staticClass: "trade "
         }, [r("div", {
             staticClass: "account-info right"
-        }, [t._v(t._s(t.$t("Token.Balance")) + ": " + t._s(t.lktAmount))]), t._v(" "), r("b-input-group", {
+        }, [t._v(t._s(t.$t("Token.Balance")) + ": " + t._s(t.hxcAmount))]), t._v(" "), r("b-input-group", {
             attrs: {
                 size: "lg"
             }
@@ -41542,14 +41543,14 @@
                 type: "number",
                 min: "0.0000",
                 disabled: "",
-                value: "lktPrice"
+                value: "hxcPrice"
             },
             model: {
-                value: t.lktPrice,
+                value: t.hxcPrice,
                 callback: function(e) {
-                    t.lktPrice = e
+                    t.hxcPrice = e
                 },
-                expression: "lktPrice"
+                expression: "hxcPrice"
             }
         }), t._v(" "), r("b-input-group-append", [r("div", {
             staticClass: "input-group-text"
@@ -41574,7 +41575,7 @@
             }
         }), t._v(" "), r("b-input-group-append", [r("div", {
             staticClass: "input-group-text"
-        }, [t._v("LKT")])])], 1), t._v(" "), r("div", {
+        }, [t._v("HXC")])])], 1), t._v(" "), r("div", {
             staticClass: "predict right"
         }, [t._v(t._s(t.$t("Token.volume")) + " " + t._s(t.predictEOSAmount) + " EOS")]), t._v(" "), r("b-input-group", {
             attrs: {
@@ -41586,7 +41587,7 @@
                 loading: t.isLoading
             },
             on: {
-                click: t.sellLuckyCoin
+                click: t.sellHuoXinCoin
             }
         }, [t._v(t._s(t.$t("Token.Sell")))])], 1)], 1)])], 1)], 1)])
     }
@@ -41604,7 +41605,7 @@
     t.exports = n.p + "transfer_icon.png?2e54518cc18b4901c6462e6b15b714d2"
 }
 , function(t, e, n) {
-    t.exports = n.p + "LKT_Reserve.png?9b344026a540382c205e831543206685"
+    t.exports = n.p + "HXC_Reserve.png?9b344026a540382c205e831543206685"
 }
 , function(t, e, n) {
     "use strict";
@@ -41652,7 +41653,8 @@
     e.push([t.i, ".chickenhd{background:url(" + r(n(435)) + ");background-size:cover;background-repeat:no-repeat;width:100%;padding:1.8rem 0 5rem;margin:0 auto}.chickenhd .header1{padding-top:6rem;font-size:55px;color:#fff;text-align:center}.chickenhd .header2{font-size:3rem;color:#0ec000;text-align:center}.chickenhd .header2 img{height:3rem;margin:0 0 .9rem}.chickenhd .container{width:23rem;margin:0 auto}.chickenhd .container p{font-size:2rem;font-style:italic;color:#fff;padding:0;text-align:center}.chickenhd .wallet{width:100%;margin:0 auto;padding:2rem}.chickenhd .wallet .binding-wallet{color:#fff;background-color:#0ec000;font-size:1.5rem;max-width:30rem;margin:0 auto}.chickenhd .wallet .no-eos-wallet{color:#0ec000;font-size:1rem;text-align:center;padding:.55rem 0 0}.chickenhd .wallet .no-eos-wallet a{color:#0ec000}", ""])
 }
 , function(t, e, n) {
-    t.exports = n.p + "NEWBG.jpg?40e2d45860562c060c00c483e254a46b"
+//  t.exports = n.p + "NEWBG.jpg?40e2d45860562c060c00c483e254a46b"
+  t.exports = n.p + "bg_qdz2.jpg?40e2d45860562c060c00c483e254a46b"
 }
 , function(t, e, n) {
     "use strict";
@@ -41900,7 +41902,7 @@
         }), t._v(t._s(t.$t("Chicken.body.MiningT5")))]), t._v("   "), r("span", {
             staticClass: "mid"
         }, [t._v(t._s(t.$t("Chicken.body.MiningT6", {
-            lktPrice: t.lktPrice
+            hxcPrice: t.hxcPrice
         })))])])])]), t._v(" "), r("table", {
             directives: [{
                 name: "show",
@@ -42043,9 +42045,9 @@
             staticClass: "gray-panel"
         }, [r("p", {
             staticClass: "line1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.BuyMind")) + t._s(t.buyAmount) + "LKT")]), t._v(" "), r("p", {
+        }, [t._v(t._s(t.$t("Chicken.Card.Card1.BuyMind")) + t._s(t.buyAmount) + "HXC")]), t._v(" "), r("p", {
             staticClass: "line2"
-        }, [t._v("1 LKT ≈ " + t._s(t.lktPrice) + " EOS")])]), t._v(" "), r("div", {
+        }, [t._v("1 HXC ≈ " + t._s(t.hxcPrice) + " EOS")])]), t._v(" "), r("div", {
             staticClass: "buy-button-container"
         }, [r("b-row", [r("b-col", {
             attrs: {
@@ -42271,15 +42273,15 @@
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
-        }, [t._v(t._s(t.$t("Chicken.Card.Card1.MyLuckyCoin")))]), t._v(" "), r("td", {
+        }, [t._v(t._s(t.$t("Chicken.Card.Card1.MyHuoXinCoin")))]), t._v(" "), r("td", {
             staticClass: "t2"
-        }, [r("span", [t._v(t._s(t.lktAmount) + " "), r("img", {
+        }, [r("span", [t._v(t._s(t.hxcAmount) + " "), r("img", {
             attrs: {
                 src: n(450)
             }
         })])])]), t._v(" "), r("tr", [r("td"), t._v(" "), r("td", {
             staticClass: "t3"
-        }, [t._v(t._s(t.lktAmount * t.lktPrice) + " EOS")])])]), t._v(" "), r("table", {
+        }, [t._v(t._s(t.hxcAmount * t.hxcPrice) + " EOS")])])]), t._v(" "), r("table", {
             staticClass: "r1"
         }, [r("tr", [r("td", {
             staticClass: "t1"
@@ -42636,7 +42638,7 @@
             staticClass: "h4"
         }, [t._v(t._s(t.$t("PlatForm.Title1")))]), t._v(" "), r("p", [t._v(t._s(t.$t("PlatForm.body1")))]), t._v(" "), r("a", {
             attrs: {
-                href: "mailto:luckyplazaoffice@gmail.com"
+                href: "mailto:huoxinplazaoffice@gmail.com"
             }
         }, [r("div", {
             staticClass: "btn btn-block"
@@ -42776,7 +42778,7 @@
         }, [r("a", {
             staticClass: "invite",
             attrs: {
-                href: "mailto:luckyplazaoffice@gmail.com"
+                href: "mailto:huoxinplazaoffice@gmail.com"
             }
         }, [t._v(t._s(t.$t("NavBar.Raider.button")))])]), t._v(" "), r("p", {
             staticClass: "bottom"
@@ -42797,28 +42799,28 @@
         zh: {
             NavBar: {
                 Account: "账户",
-                Chicken: "吃鸡玩法",
+                Chicken: "抢地主",
                 Monopoly: "大富豪",
-                Platform: "开放平台",
-                Raiders: "夺宝奇兵",
+//                Platform: "开放平台",
+//                Raiders: "夺宝奇兵",
                 Login: "登入",
                 Popularize: "推广分红",
                 Course: "教程",
                 Statement: "声明",
-                Whitepaper: "白皮书",
-                Language: "语言",
+//                Whitepaper: "白皮书",
+//                Language: "语言",
                 My: "我的",
                 promotion: {
                     DividendsOfPromotion: "推广分红",
                     T1: "即刻邀请更多好友来一起游戏！",
-                    T2: "你将获得他们购买BULLETS总额的",
-                    T3: "被邀请人购买BULLETS总量＜50,0000颗时，分红为5%",
-                    T4: "被邀请人购买BULLETS总量≥50,0000颗时，分红为10%",
+                    T2: "你将获得他们购买田地总额的",
+                    T3: "被邀请人购买田地总量＜50,0000颗时，分红为5%",
+                    T4: "被邀请人购买田地总量≥50,0000颗时，分红为10%",
                     T5: "复制并分享给你的朋友",
                     T6: "分红"
                 },
                 Raider: {
-                    Raiders: "夺宝奇兵",
+//                    Raiders: "夺宝奇兵",
                     CommingSoon: "即将开始",
                     car: "保时捷 911",
                     Value: "价值",
@@ -42831,39 +42833,39 @@
             },
             Chicken: {
                 head: {
-                    Title1: "等黎明来，或在黑暗中黯然离开",
-                    Title2: "绑定钱包，开始吃鸡",
+                    Title1: "不要走，决战到天亮吧！",
+                    Title2: "绑定钱包，开始抢地主",
                     Title3: "还没有EOS钱包？点击查看教程",
-                    Title4: "我的子弹"
+                    Title4: "我的田地"
                 },
                 body: {
-                    Rule: "E-PUBG",
+                    Rule: "GRAB-LAND",
                     AirDrop: "空投奖励",
                     Mining: "游戏挖矿",
-                    Title21: "子弹仍需",
-                    Title22: "颗",
+                    Title21: "田地仍需",
+                    Title22: "块",
                     Title3: "空投额度",
                     Times: "次",
-                    RuleT1: "游戏总时长24小时，每次购买Bullets将增加游戏时间，上限不超过起始时间    ",
-                    RuleT2: "随游戏进行，BULLETS的价格递增，每颗Bullets所增加的游戏时间递减",
-                    RuleT3: "销售BULLETS累计的EOS将按比例分给Bullets持有者，最后一颗BULLETS的购买者将成功吃鸡，获得终极大奖",
+                    RuleT1: "《抢地主》是一款基于EOS网络的去中心化区块链游戏，游戏总时长24小时，每次购买田地将增加游戏时间，上限不超过起始时间 ",
+                    RuleT2: "随游戏进行，田地的价格递增，每块田地所增加的游戏时间递减",
+                    RuleT3: "销售田地累计的EOS将按比例分给田地持有者，最后一块田地的购买者将成功抢地主，获得终极大奖",
                     RuleT4: "距离下次空投仍需{numBullet}",
-                    RuleT5: "当前已售子弹{bulletAmount}颗，+{bulletTime}/bullet",
-                    RuleT6: "颗子弹",
+                    RuleT5: "当前已售田地{bulletAmount}块，+{bulletTime}/1块田地",
+                    RuleT6: "块田地",
                     RuleMinhead: "可挖矿",
                     RuleMinbody: "游戏挖矿，双重收益",
                     RuleDrophead: "抢空投",
                     RuleDropbody: "拒绝随机，实力抢夺",
                     RuleChampinghead: "决赛圈",
                     RuleChampingbody: "争分夺秒，贴身肉搏",
-                    MiningT1: "每次购买子弹时，系统将送出等量的Lucky平台的平台币LKT给玩家",
-                    MiningT2: "Lucky平台中所有游戏销售额的20%都将注入Bancor池中，持有LKT后，即可坐等币价上涨分红",
-                    MiningT3: "平台内建基于Bancor引擎的智能交易系统，获得的LKT可直接在平台内进行买卖",
+                    MiningT1: "每次购买田地时，系统将送出等量的HuoXin平台的平台币HXC给玩家",
+                    MiningT2: "HuoXin平台中所有游戏销售额的20%都将注入Bancor池中，持有HXC后，即可坐等币价上涨分红",
+                    MiningT3: "平台内建基于Bancor引擎的智能交易系统，获得的HXC可直接在平台内进行买卖",
                     MiningT4: "当前阶段",
-                    MiningT5: "当前LKT价格",
-                    MiningT6: "1 LKT ≈ {lktPrice} EOS",
-                    DropT1: "游戏根据售出子弹总量分为6个阶段，每售出10W颗子弹将开始空投",
-                    DropT2: "购买到第(N*10)万颗子弹的用户将获得奖励（N=1，2，3....）",
+                    MiningT5: "当前HXC价格",
+                    MiningT6: "1 HXC ≈ {hxcPrice} EOS",
+                    DropT1: "游戏根据售出田地总量分为6个阶段，每售出10W块田地将开始空投",
+                    DropT2: "购买到第(N*10)万块肥沃田地的用户将获得奖励（N=1，2，3....）",
                     DropT3: "随游戏进度，每个空投包奖励将不断增大",
                     Player: "玩家",
                     Time: "时间",
@@ -42873,12 +42875,12 @@
                     Card1: {
                         Withdraw: "提现",
                         BuyButton: "使用EOS购买",
-                        BuyMind: "本次购买子弹可获得",
+                        BuyMind: "本次购买田地可获得",
                         Rule: "一些规则",
-                        Incomestatistics: "吃鸡统计",
+                        Incomestatistics: "抢地主统计",
                         dividendincome: "分红收益",
                         InviterReward: "邀请奖励",
-                        MyLuckyCoin: "我的LKT",
+                        MyHuoXinCoin: "我的HXC",
                         MyAirdrop: "我的空投",
                         TotalReward: "总收益",
                         Buy: "购买",
@@ -42892,7 +42894,7 @@
                         TobalInvestment: "总投资额",
                         PrizePool: "当前奖池",
                         Reward: "交易奖励",
-                        Bullets: "我的弹药",
+                        Bullets: "我的田地",
                         Income: "我的收益",
                         Player: "玩家",
                         Time: "时间",
@@ -42901,10 +42903,10 @@
                 }
             },
             Token: {
-                Title1: "公平，透明，去中心化",
-                Title2: "基于EOS智能合约的新一代游戏平台",
-                Title3: "我的总LKT量",
-                Head1: "用户在Lucky平台内游戏，可通过“游戏即挖矿”的形式，获得相应比例的平台币LKT。Lucky旗下的所有游戏，都会源源不断地向LKT储备池内注入资金，以保持LKT价值上升，永不破发，LKT持有者即能享受平台内所有游戏的收益分红。同时，平台基于自研改进的Bancor算法引擎，打造了去中心化交易平台，使得LKT可在平台内进行直接交易。",
+                Title1: "游戏、博弈、交易",
+                Title2: "基于EOS智能合约去中心化的综合性应用平台",
+                Title3: "我的总HXC量",
+                Head1: "完成这场马拉松式的挖矿游戏，你必须要有“火星探索精神”的勇气，途中必经“探险、陷阱、飞翔、阴谋、传说”五大文明时期。",
                 Button: "绑定钱包，立即加入",
                 NoWallet: "还没有EOS钱包？点击查看教程",
                 Priceline: "价格曲线",
@@ -42914,22 +42916,22 @@
                 AmountBuy: "买入量",
                 AmountSell: "卖出量",
                 volume: "预计交易额",
-                Buy: "买入LKT",
-                Sell: "卖出LKT",
+                Buy: "买入HXC",
+                Sell: "卖出HXC",
                 Bancor: "当前储备金池",
                 EOSBANCOR: "EOS 储备金 ",
-                LKTBANCOR: "LKT 储备金 "
+                HXCBANCOR: "HXC 储备金 "
             },
             PlatForm: {
-                Title1: "一起让Lucky平台变得更棒，更有趣！",
+                Title1: "一起让HuoXin平台变得更棒，更有趣！",
                 title2: "一些讯息",
-                body1: "即刻加入Lucky开发者阵营，与我们共建去中心化的游戏经济体系。与更多用户分享快乐，最大化成就您的游戏价值。",
-                body2: "以获取更多开发者相关讯息，成为Lucky早鸟开发者团队一员。",
+                body1: "即刻加入HuoXin开发者阵营，与我们共建去中心化的游戏经济体系。与更多用户分享快乐，最大化成就您的游戏价值。",
+                body2: "以获取更多开发者相关讯息，成为HuoXin早鸟开发者团队一员。",
                 body3: "作为开发者，你能获得什么？",
                 body4: "拥有持续不断的新增流量",
                 body5: "提供高流通性，高便利性的Token",
                 body6: "提供超高附加值的空投奖励",
-                body7: "提供共享Bancor池，形成一揽子货币体系共同繁荣Lucky游戏平台",
+                body7: "提供共享Bancor池，形成一揽子货币体系共同繁荣HuoXin游戏平台",
                 head: "★ 即将入驻 ★",
                 contactus: "联系我们",
                 g1name: "时时彩",
@@ -42970,7 +42972,7 @@
                     Value: "Value",
                     button: "Reservation now",
                     people: "",
-                    Titele: "The player picks the favorite prize. Each prize will be assigned a corresponding unique number. The player consumes a certain number of EOS and can get a number that is randomly assigned by the system. When all the numbers have been assigned, the system will calculate a random Lucky number according to the rules. The user who holds the number can directly obtain the product, which will be given to the player in the form of equivalent EOS."
+                    Titele: "The player picks the favorite prize. Each prize will be assigned a corresponding unique number. The player consumes a certain number of EOS and can get a number that is randomly assigned by the system. When all the numbers have been assigned, the system will calculate a random HuoXin number according to the rules. The user who holds the number can directly obtain the product, which will be given to the player in the form of equivalent EOS."
                 },
                 NumOfPart: "Number of participants",
                 NumOfRest: "Number of the rest players"
@@ -43002,12 +43004,12 @@
                     RuleDropbody: "Refuse random, just to fight",
                     RuleChampinghead: "Final Round",
                     RuleChampingbody: "Race against time, fight high-to-hand",
-                    MiningT1: "Each time you purchase Bullets, the system will send the same amount of LKT currency on the Lucky platform to the player.",
-                    MiningT2: "20% of all game sales on the Lucky platform will be injected into the Bancor pool. After holding LKT, you can wait for the price to increase and get your dividends.",
-                    MiningT3: "The platform has built intelligent trading system based on Bancor engine, and the obtained LKT can be bought and sold directly on the platform.",
+                    MiningT1: "Each time you purchase Bullets, the system will send the same amount of HXC currency on the HuoXin platform to the player.",
+                    MiningT2: "20% of all game sales on the HuoXin platform will be injected into the Bancor pool. After holding HXC, you can wait for the price to increase and get your dividends.",
+                    MiningT3: "The platform has built intelligent trading system based on Bancor engine, and the obtained HXC can be bought and sold directly on the platform.",
                     MiningT4: "Current Stage",
-                    MiningT5: "Current LKT price",
-                    MiningT6: "1 LKT ≈ {lktPrice} EOS",
+                    MiningT5: "Current HXC price",
+                    MiningT6: "1 HXC ≈ {hxcPrice} EOS",
                     DropT1: "The game is divided into 6 stages according to the total amount of sold Bullets. The air-drop will start each time 100,000 Bullets are sold.",
                     DropT2: "Users who purchase the N * 100000 Bullets will receive a reward (N=1, 2, 3...) until the 31,000,000 Bullets is sold. ",
                     DropT3: "As the game progresses, each airdrop will increase the reward.",
@@ -43024,7 +43026,7 @@
                         Incomestatistics: "E-PUGB Statistics",
                         dividendincome: "Dividend Income",
                         InviterReward: "Inviting Awards",
-                        MyLuckyCoin: "My LKT",
+                        MyHuoXinCoin: "My HXC",
                         MyAirdrop: "My Airdrop",
                         TotalReward: "Total Income",
                         Buy: "BUY",
@@ -43049,8 +43051,8 @@
             Token: {
                 Title1: "Fair Transparent Desentralization",
                 Title2: "Next-Generation Gaming Platform Based on EOS Intelligent Contract",
-                Title3: "My LKT",
-                Head1: 'The user plays the game in the Lucky platform, and can obtain the corresponding proportion of the platform currency LKT through the form of "game is mining". All of Lucky\'s games will continue to inject funds into the LKT reserve pool to keep LKT value up and never break. LKT holders will be able to enjoy the dividends of all games in the platform. At the same time, the platform is based on the self-developed Bancor algorithm engine, which creates a decentralized trading platform, enabling LKT to conduct direct transactions within the platform.',
+                Title3: "My HXC",
+                Head1: 'The user plays the game in the HuoXin platform, and can obtain the corresponding proportion of the platform currency HXC through the form of "game is mining". All of HuoXin\'s games will continue to inject funds into the HXC reserve pool to keep HXC value up and never break. HXC holders will be able to enjoy the dividends of all games in the platform. At the same time, the platform is based on the self-developed Bancor algorithm engine, which creates a decentralized trading platform, enabling HXC to conduct direct transactions within the platform.',
                 Button: "Bind wallet to join us",
                 Priceline: "Price Chart",
                 Balance: "Available",
@@ -43059,22 +43061,22 @@
                 AmountBuy: " volume",
                 AmountSell: "volume ",
                 volume: "Expected Get ",
-                Buy: "Buy LKT",
-                Sell: "Sell LKT",
+                Buy: "Buy HXC",
+                Sell: "Sell HXC",
                 Bancor: "Current Reserve Pool",
                 EOSBANCOR: "EOS Reserve ",
-                LKTBANCOR: "LKT Reserve "
+                HXCBANCOR: "HXC Reserve "
             },
             PlatForm: {
-                Title1: "Let’s work together to make the platform of Lucky more brilliant and interesting!",
+                Title1: "Let’s work together to make the platform of HuoXin more brilliant and interesting!",
                 title2: "Some Information",
-                body1: "Join the camp of Lucky developers right now and build a decentralized game economic system with us hand in hand. Share joy with more users and maximize your value in the game.",
-                body2: "To get more developers' information, become a member of Lucky early bird developer team.",
+                body1: "Join the camp of HuoXin developers right now and build a decentralized game economic system with us hand in hand. Share joy with more users and maximize your value in the game.",
+                body2: "To get more developers' information, become a member of HuoXin early bird developer team.",
                 body3: "As a developer , what cant you get?",
                 body4: "Continuously growing new users",
                 body5: "Uniform settlement token with high liquidity and convenience",
                 body6: "Offering high value-added airdrop Awards",
-                body7: "A shared Bancor pool of the platform, and a package of monetary systems for the building and prosperity of lucky game platform",
+                body7: "A shared Bancor pool of the platform, and a package of monetary systems for the building and prosperity of huoxin game platform",
                 head: "★ Coming Soon ★",
                 contactus: "Contact Us",
                 g1name: "Lottery",
